@@ -1,0 +1,84 @@
+<html ng-app="social-app">
+  <head>
+    <meta charset="utf-8">
+          <!-- Sets initial viewport load and disables zooming  -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Leak Studio Payment</title>
+
+     <link href="https://code.ionicframework.com/1.0.0-beta.1/css/ionic.min.css" rel="stylesheet">
+    <script src="https://code.ionicframework.com/1.0.0-beta.1/js/ionic.bundle.min.js"></script>
+
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- SweetAlert2 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+
+
+  </head>
+  <body ng-app="social-app" ng-controller="paymentCtrl">
+    <ion-pane>
+      <ion-header-bar class="bar bar-header bar-stable">
+        <div class="buttons">
+          <button class="button icon-left ion-ios7-arrow-back button-clear button-dark ion-myclass" style="font-size:150%;"></button>
+        </div>
+        <h1 class="title">Leak Studio Payment</h1>
+        <div class="buttons">
+          <button class="button button-clear button-positive" style="font-size:1em;">🇧🇩</button>
+        </div>
+      </ion-header-bar>
+      <ion-content header-shrink scroll-event-interval="5">         
+        <!--Credit Card Information-->
+        <h4 style="padding:0.5em;">Player Information</h4>
+        
+        <div class="list">
+        <form action="ls-payment-load.html" method="post">
+        
+          <label class="item item-input">
+            <i class="ion-ios7-person" style="padding-right:0.5em;"></i>
+            <input type="text" placeholder="Player ID" >
+          </label>
+          <label class="item item-input">
+            <i class="icon ion-card" style="padding-right:0.5em;"></i>
+            <input type="text" placeholder="Enter Redeem Code" pattern="^[4742KLDP6671MNRO]{16}" required />
+              
+          </label>
+          
+       
+           <!--Billing info-->
+            <div style="height: 1em;"></div>
+                <label class="item item-input">
+                 <input type="text" placeholder="email address">
+               </label>
+            </div>             
+        <div class="list">
+          <a class="item item-avatar" href="#">
+            <img src="https://www.paypalobjects.com/webstatic/mktg/logo/pp_cc_mark_37x23.jpg">
+            <h2>PayPal</h2>
+          <p class="subdude">Pay with PayPal</p>
+          </a>
+      </div>
+          
+      </ion-content>
+     <br>
+     <br>
+     <center>
+     <a href="ls-payment-load.html">
+          <button id="info" style="background-color:red;padding:5px 150px;color:#fff;border-radius:5px;text-decoration:none;"> 
+          <b>Top up</b> </button>
+</a></center>
+</form>
+
+  
+ <script type="text/javascript">
+ 
+$(document).on('click', '#info', function(e) {
+  swal(
+  'Info!',
+  'You will be redirected to <b style="color:cornflowerblue;">payment confirmation</b> page shortly.',
+  'info'
+  )
+  });
+  </script>
+</html>
