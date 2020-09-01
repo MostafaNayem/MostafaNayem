@@ -7,8 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
    
    <title>
-   
-   2268 Diamond Topup
+   LS TOP UP CENTER
    </title>
    
    
@@ -81,61 +80,6 @@
   
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-  body {
-  font-family: Arial, Helvetica, sans-serif;
-  }
- 
- table, th, td {
- border: 1px solid white;
- border-collapse: collapse;
- }
- </style>
- 
- <style>
- body {
- font-family: "Lato", sans-serif;
- }
- 
- .sidenav {
- height: 100%;
- width: 0;
- position: fixed;
- z-index: 1;
- top: 0;
- left: 0;
- background-color: #111;
- overflow-x: hidden;
- transition: 0.5s;
- padding-top: 60px;
- }
- 
- .sidenav a {
- padding: 8px 8px 8px 32px;
- text-decoration: none;
- font-size: 25px;
- color: #818181;
- display: block;
- transition: 0.3s;
- }
- 
- .sidenav a:hover {
- color: #f1f1f1;
- }
- 
- .sidenav .closebtn {
- position: absolute;
- top: 0;
- right: 25px;
- font-size: 36px;
- margin-left: 50px;
- }
- 
- @media screen and (max-height: 450px) {
- .sidenav {padding-top: 15px;}
- .sidenav a {font-size: 18px;}
- }
- </style>
  
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -184,16 +128,7 @@
            <body>
            
          
-          <body>
-     
-          <h4>
-          <?php ; ?>
-          </h4>
-          <?php ; ?>
-          </php>
-          </body>
-         
-       </php>
+       
        
   <!-- apppost-->
 
@@ -212,12 +147,13 @@
  <p><span>Marchent:</span><span>Airtime NCash Limited</span></p>
  <p><span>Total Price:</span><span>1250 BDT</span></p>
 
+<center>
 <br>
+ <button id="link" style="background-color:green;padding:8px 80px;color:#fff;border-radius:15px;text-decoration:none;" type="submit">Buy Now</button>
+</center>
+
  <ul class="pager">
-    <center>
-    <li><a href="pay-1080.html">Confirm Purchase</a></li>
     
-    <br><br>
     <li><a href="index.html">Cancel</a></li>
     
     
@@ -227,13 +163,7 @@
  
  </div></div></article></div></div>
  
- 
-    
 
-   
-     
-       
-     
        
       <br><br>
       <div class="content" id="download">
@@ -266,11 +196,31 @@
 </center>
 
 
+<script type="text/javascript">
 
+// Alert Redirect to Another Link
+$(document).on('click', '#link', function(e) {
+swal({
+title: "1080+1188 Diamond", 
+text: "You will be redirected to payment center.", 
+type: "warning",
+confirmButtonText: "Confirm",
+showCancelButton: true
+})
+.then((result) => {
+if (result.value) {
+window.location = 'pay-1080.html';
+} else if (result.dismiss === 'cancel') {
+swal(
+'Cancelled',
+'Your stay here :)',
+'error'
+)
+}
+})
+});
 
-
-
-
+</script>
 
 
   <script src="https://www.clashofmagic.cc/scripts/jquery.js"></script>
