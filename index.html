@@ -1,437 +1,253 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head> <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Leak Studio - Home</title>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 
-<meta name="theme-color" content="#ffffff">
-<link rel="preconnect" href="https://cdn.royaleapi.com" crossorigin>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://www.google-analytics.com">
-<link rel="preconnect" href="https://cdnjs.cloudflare.com">
-<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<title>Leak Studio - Topup</title>
 
-<meta name="google" content="notranslate" />
+<!-- Web Fonts
+============================================= -->
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-<link rel="stylesheet" type="text/css" href="https://cdn.royaleapi.com/static/semantic/dist/semantic.min.css?t=32a6bbf4a921163b72ef7bc18a2eff658b0fcb16" />
-<link rel="stylesheet" type="text/css" href="https://cdn.royaleapi.com/static/scss/app.css?t=15889d91891eef85273a245c34edf5d023f64ed6" />
-<meta property="og:image" content="https://cdn.royaleapi.com/static/img/og/og-season14.jpg?t=8e8fdb9fe4989f403170bf7fde4b07f43027ae30">
-<meta name="twitter:image" content="https://cdn.royaleapi.com/static/img/og/og-season14.jpg?t=8e8fdb9fe4989f403170bf7fde4b07f43027ae30">
-
-<script id="tyche" src="//cdn.intergi.com/hera/tyche.js" type="text/javascript"></script>
-<script data-ad-client="ca-pub-7508750482993527" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-<script data-cfasync="false" type="text/javascript" src="https://cdn.royaleapi.com/static/jslib/jquery/jquery-3.5.1.min.js?t=c8e1c8b386dc5b7a9184c763c88d19a346eb3342"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.4.4/mobile-detect.min.js"></script>
-<script data-cfasync="false" src="https://cdn.royaleapi.com/static/semantic/dist/semantic.min.js?t=10afa74f509fef38c4baeff99d27daa4b0369e99"></script>
-
-<script async src="https://cdn.royaleapi.com/static/js/newrelic/newrelic_royaleapi-web.js?t=4b7ecec98ad8a57169321bd1d8863f8a4828b627"></script>
-
-<meta name="google-site-verification" content="a9o0ASQ7jwVgc13sdOBXFjq05aauwFb7WoXRBt0l19w" />
-<link rel="stylesheet" href="https://cdn.royaleapi.com/static/lib/flickity/flickity.min.css?t=d174500e876190757a42ceb7b593806c61bf7308">
-<link rel="stylesheet" href="https://cdn.royaleapi.com/static/css/home.css?t=9bd7f26d0beb826984ff9027b5da915ba2321b26">
-
-<meta name="theme-color" content="#ffffff">  <link rel="stylesheet" href="https://an1.com/templates/android_one/css/main2.min.css?v=88" />   
-
-
-<style>
-        .intro p {
-            font-size: 1.33em;
-        }
-
-        #tag-search-tabs {
-            background-color: rgba(255, 255, 255, 0.8);
-        }
-
-        .border0 {
-            border: none !important;
-        }
-
-    </style>
+<!-- Stylesheet
+============================================= -->
+<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/vendor/bootstrap/css/bootstrap.min.css" />
+<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/vendor/font-awesome/css/all.min.css" />
+<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/vendor/owl.carousel/assets/owl.carousel.min.css" />
+<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/vendor/owl.carousel/assets/owl.theme.default.min.css" />
+<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/css/stylesheet.css" />
 </head>
-<body class="">
+<body>
+<!-- Preloader -->
+<div id="preloader">
+  <div data-loader="dual-ring"></div>
+</div>
+<!-- Preloader End --> 
 
-
-
-<div class="pusher">
-<div id="top_menu" class="ui sticky borderless fluid menu">
-<a class="brand item header" href="/">
-<img src="ls-logo.jpg" style="height:2rem; width: 3rem;" alt="LeakStudio" />
-<span class="mobile-hide" style="padding-left:0.7rem;">Leak Studio</span>
-</a>
-<div class="right compact menu">
-<a class="mobile-hide nav item" href="#">
-Decks </a>
-<a class="mobile-hide nav item" href="#">
-Cards </a>
-<a class="mobile-hide nav item" href="#">
-Players </a>
-<a class="mobile-hide nav item" href="#">
-Clans </a>
-<a class="mobile-hide nav item" href="#">
-Esports </a>
-
-<div id="search_all_button" class="link item">
-<i class="search icon"></i>
-</div>
-
-<a id="user_button" class="link item" href="/login">
-<i class="user icon"></i>
-</a>
-
-
-<div id="top-fave" class="ui dropdown item">
-<i class="heart icon"></i>
-<div id="player_saved_menu" class="menu">
-</div>
-</div>
-<div id="sidebar-toggle" class="link item">
-<i class="content icon"></i>
-</div>
-</div>
-</div>
-<div id="global_search_segment" class="ui attached segment global_search hidden">
-<div class="content">
-<form class="ui form global_search" action="/player/search/results" method="get">
-<div class="player_search_container ui fluid search">
-<div class="field" data-name="player">
-<label>Player</label>
-<div class="ui icon large input">
-<input class="prompt" data-section="player" type="text" name="q" placeholder="Name or tag, e.g. C0G20PR2" />
-<i class="search link icon"></i>
-</div>
-</div>
-<div class="results"></div>
-</div>
-</form>
-<form class="ui form global_search" action="/clan" method="get">
-<div class="clan_search_container ui fluid search">
-<div class="field" data-name="clan">
-<label>Clan</label>
-<div class="ui icon large input">
-<input class="prompt" data-section="clan" type="text" name="q" placeholder="Name or tag, e.g. 9PJ82CRC" />
-<i class="search link icon"></i>
-</div>
-</div>
-<div class="results"></div>
-</div>
-</form>
-<form class="ui form global_search" action="/tournament" method="get">
-<div class="tournament_search_container ui fluid search">
-<div class="field" data-name="tournament">
-<label>Tournament</label>
-<div class="ui icon large input">
-<input class="prompt" data-section="tournament" type="text" name="q" placeholder="Name or tag" />
-<i class="search link icon"></i>
-</div>
-</div>
-<div class="results"></div>
-</div>
-</form>
-<button class="ui icon button" id="global_search_close_button">
-<i class="close icon"></i>
-</button>
-</div>
-</div>
-<div id="topbar">
-<div class="ui attached segment">
-<div class="nav_aux_container">
-<div class="creator_code_segment item">
-<img class="ui mini image floated left margin0" src="" alt="leakstudio" style="height:1.5rem;width:auto;" />
-leakstudio.me
-</div>
-<div class="language_selector_segment item">
-<div id="language_sidebar_button" class="link item language_button" style="text-align: right;">
-<i class="us flag"></i>
-English
-</div> </div>
-</div>
-<div class="nav_container main">
-<a class="item" href="#">
-Leaks </a>
-<a class="item" href="#">
-News </a>
-<a class="item" href="#">
-Tournament </a>
-<a class="item" href="#">
-GVG </a>
-<a class="item" href="#">
-Esports </a>
-<a class="item" href="#">
-Strategy </a>
-</div>
-</div>
-</div> <div class="ui attached error message margin0 adblock_message hidden">
-</div>
-
-<div id="page_content_container">
-<div id="fullpage_screenshot_branding" class="ui attached borderless stackable menu" style="display:none;">
-<div class="ui header item">
-<img class="ui small image" src="#" />
-Leak Studio
-</div>
-<div class="item">leakstudio.me</div>
-<div id="fullpage_screenshot_datetime" class="right item"></div>
-</div>
-
-
-
-<div id="page_content">
-<div class="main-carousel">
-<div class="carousel-cell" style="
-                         background-image:url(https://images.hdqwalls.com/wallpapers/bthumb/luqueta-garena-free-fire-game-ik.jpg);
-                         background-position:center center;;
-                         ">
-<a href="#" style="">
-<div class="ui container">
-<div class="ui centered two column grid stackable carousel-cell-content">
-<div class="column">
-<h1 class="ui inverted header">
-Guild vs. Guild
-</h1>
-<p class="ui inverted">Friendly Tournament</p>
-<div class="ui blue right labeled icon button">
-Explore
-<i class="right arrow icon"></i>
-</div>
-</div>
-<div class="column">
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="carousel-cell" style="
-                         background-image:url(https://images.hdqwalls.com/wallpapers/bthumb/free-fire-4k-p5.jpg);
-                         background-position:center center;;
-                         ">
-<a href="#" style="">
-<div class="ui container">
-<div class="ui centered two column grid stackable carousel-cell-content">
-<div class="column">
-<h1 class="ui inverted header">
-Freefire Squad Tournament
-</h1>
-<p class="ui inverted">Register Now!</p>
-<div class="ui orange right labeled icon button">
-Explore
-<i class="right arrow icon"></i>
-</div>
-</div>
-<div class="column">
-</div>
-</div>
-</div>
-</a>
-</div>
-
-
-<div class="carousel-cell" style="
-                         background-image:url(https://images.hdqwalls.com/wallpapers/bthumb/garena-free-fire-laura-re.jpg);
-                         background-position:center center;;
-                         ">
-<a href="#" style="">
-<div class="ui container">
-<div class="ui centered two column grid stackable carousel-cell-content">
-<div class="column">
-<h1 class="ui inverted header">
-Freefire Solo Tournament
-</h1>
-<p class="ui inverted">Register Now!</p>
-<div class="ui red right labeled icon button">
-Explore
-<i class="right arrow icon"></i>
-</div>
-</div>
-<div class="column">
-</div>
-</div>
-</div>
-</a>
-</div>
-
-<div class="carousel-cell" style="
-                         background-image:url(https://images.hdqwalls.com/wallpapers/bthumb/2020-garena-free-fire-game-4k-j3.jpg);
-                         background-position:top center;;
-                         ">
-<a href="#" style="">
-<div class="ui container">
-<div class="ui centered two column grid stackable carousel-cell-content">
-<div class="column">
-<h1 class="ui inverted header">
-Freefire Duo Tournament
-</h1>
-<p class="ui inverted">Register Now!</p>
-<div class="ui blue right labeled icon button">
-Explore
-<i class="right arrow icon"></i>
-</div>
-</div>
-<div class="column">
-</div>
-</div>
-</div>
-</a>
-</div>
-
-<div class="carousel-cell" style="
-                         background-image:url(https://cdn.royaleapi.com/static/img/carousel/cw2-carousel.jpg?t=5f45bf084fa2ef83e96a5781859b7a06d56233cd);
-                         ;
-                         ">
-<a href="#" style="">
-<div class="ui container">
-<div class="ui centered two column grid stackable carousel-cell-content">
-<div class="column">
-<h1 class="ui inverted header">
-Clash Royale Tournament
-</h1>
-<p class="ui inverted">Register Now!</p>
-<div class="ui red right labeled icon button">
-Explore
-<i class="right arrow icon"></i>
-</div>
-</div>
-<div class="column">
-</div>
-</div>
-</div>
-</a>
-</div>
-
-<div class="carousel-cell" style="
-                         background-image:url(https://cdn.royaleapi.com/static/img/carousel/instagram-carousel.jpg?t=f9562b5b9d2857a416e4f28a7e9af1ab95c109e7);
-                         ;
-                         ">
-<a href="#" style="">
-<div class="ui container">
-<div class="ui centered two column grid stackable carousel-cell-content">
-<div class="column">
-<h1 class="ui inverted header">
-Instagram
-</h1>
-<p class="ui inverted">Follow us @leakstudio.ff!</p>
-<div class="ui pink right labeled icon button">
-Follow
-<i class="right arrow icon"></i>
-</div>
-</div>
-<div class="column">
-</div>
-</div>
-</div>
-</a>
-</div>
-<div class="carousel-cell" style="
-                         background-image:url(https://images.hdqwalls.com/wallpapers/bthumb/pubg-game-4k-qx.jpg);
-                         ;
-                         ">
-<a href="#" style="">
-<div class="ui container">
-<div class="ui centered two column grid stackable carousel-cell-content">
-<div class="column">
-<h1 class="ui inverted header">
-PUBG Mobile
-</h1>
-<p class="ui inverted">News/ Leaks and Tournament</p>
-<div class="ui green right labeled icon button">
-Available Soon!
-<i class="right arrow icon"></i>
-</div>
-</div>
-<div class="column">
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="ui green inverted attached borderless segment creator_code_segment" style="border:0">
-<img class="ui mini image floated left" src="https://cdn.royaleapi.com/static/img/ui/creator-code_128-fs8.png?t=7da105fd8c80e46ced03f8fa81d081ed4497bc14" alt="Creator Code" style="height:1.5rem;width:auto;" />
-Follow me in Facebook: <strong>fb/leakstudio</strong>
-
-<div style="float:right;display:inline-block;">
-<i class="floated right check link icon close_button"></i>
-</div>
-</div>
-</div></div></div>
-
-
-
-<div class="apps"> <div class="container"> <div class="flex"><div class="content-area-app"></div>
+<!-- Document Wrapper   
+============================================= -->
+<div id="main-wrapper"> 
   
- <div class="slide"> <a href="ff-topup.html" class="item"> <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/freefire_tile_in.jpg" alt="Freefire"> <div class="name">Freefire</div> <div class="developer">Garena</div> </a></div>
-  
-<div class="slide"> <a href="#" class="item"> <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/pubgm_rps_tile.jpg" alt="pubgm"> <div class="name">PUBG Mobile</div> <div class="developer">Tencent</div> </a></div>
-  
- <div class="slide"> <a href="#" class="item"> <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/mlbb_tile.jpg" alt="mobile legends"> <div class="name">Mobile Legends</div> <div class="developer">Moonton</div> </a></div>
- 
- <div class="slide"> <a href="#" class="item"> <img src="https://cdn1.codashop.com/S/content/mobile/images/product-tiles/lordsmobile_tile.jpeg" alt="mobile legends"> <div class="name">Mobile Legends</div> <div class="developer">IGG.COM</div> </a></div>
- 
-
-
-</div></div></div>
-
-
-
-
-<br><br><br>
-     <div class="content" id="download">
-     <div class="content content-box content-boxed content-gradient round-small shadow-large">
-     <center>
-   <sup>
-     <a href="mailto:goldrush4201@gmail.com">   <i class="fa fa-headphones"></i> customer service</a> 
-     <br>2020 © Nayem Corporation LTD. 
-     </sup>
-     </center></div></div>
-
-<br><br><br><br>
-
-
-
-<script data-cfasync="false" type="text/javascript" src="https://cdn.royaleapi.com/static/js/home.js?t=7c0732f98e1fe72c3f52a9a79d4c273f3630e18f"></script>
-<script data-cfasync="false" type="text/javascript" src="https://cdn.royaleapi.com/static/lib/flickity/flickity.pkgd.min.js?t=fff8d6dd8d878058bc14850c11c8dd9d43a2c8aa"></script>
-<script>
-        function initCarousel() {
-            let main_carousel = $('.main-carousel');
-            main_carousel.flickity({
-                // options
-                cellAlign: 'left',
-                contain: true,
-                autoPlay: 5000,
-                cellSelector: '.carousel-cell',
-            });
-            main_carousel.transition('show');
-        }
-
-        $(document).ready(function () {
-        initCarousel();
-        $('.ui.embed').embed();
-        })
-        </script>
-        <script>
-        function translate_i18n_duration_short(selector = null) {
-        if (selector === null) {
-        selector = '.i18n_duration_short';
-        }
-        $(selector)
-        .each(function () {
-        let text = $(this).text();
-        text = text.replace('y', 'y');
-        text = text.replace('w', 'w');
-        text = text.replace('d', 'd');
-        text = text.replace('h', 'h');
-        text = text.replace('m', 'm');
-        text = text.replace('s', 's');
-        text = text.replace('ago', '');
-        $(this).text(text);
-        })
-        ;
-        }
+  <!-- Header
+  ============================================= -->
+  <header id="header">
+    <div class="container">
+      <div class="header-row">
+        <div class="header-column justify-content-start"> 
+          
+          <!-- Logo
+          ============================================= -->
+          <div class="logo"> <a href="index.html" title="Leak Studio"><img src="ls-logo.png" alt="Leak Studio" width="127" height="29" /></a> </div>
+          <!-- Logo end --> 
+          
+        </div>
+        <div class="header-column justify-content-end"> 
+          
+          <!-- Primary Navigation
+          ============================================= -->
+          <nav class="primary-menu navbar navbar-expand-lg">
+            <div id="header-nav" class="collapse navbar-collapse">
+              <ul class="navbar-nav">
+                <li class="dropdown active"> <a class="dropdown-toggle" href="#">Home</a>
+                  <ul class="dropdown-menu">
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Freefire Topup</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index.html">Direct Topup</a></li>
+                        <li><a class="dropdown-item" href="booking-hotels.html">Ingame Purchase</a></li>
+                      </ul>
+                    </li>
+                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">PUBG Mobile</a>
+                      <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="index-2.html">Direct Topup</a></li>
+                        <li><a class="dropdown-item" href="booking-hotels-2.html">Ingame Purchase</a></li>
+                      </ul>
+                    </li>
+                    </ul>
+                </li>
+                
+           
+                <li class="login-signup ml-lg-2"><a class="pl-lg-4 pr-0" data-toggle="modal" data-target="#login-signup" href="#" title="Login / Sign up">Login / Sign up <span class="d-none d-lg-inline-block"><i class="fas fa-user"></i></span></a></li>
+              </ul>
+            </div>
+          </nav>
+          <!-- Primary Navigation end --> 
+          
+        </div>
         
-        $(document).ready(function () {
-        translate_i18n_duration_short();
-        })
-        </script>
-        </body>
-        </html>
+        <!-- Collapse Button
+        ============================================= -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"> <span></span> <span></span> <span></span> </button>
+      </div>
+    </div>
+  </header>
+  <!-- Header end --> 
+  
+  
+  
+  
+  <!-- Content
+  ============================================= -->
+  <div id="content"> 
+    
+    <!-- Secondary Navigation
+    ============================================= -->
+    <div class="bg-secondary">
+      <div class="container">
+        <ul class="nav secondary-nav">
+          <li class="nav-item"> <a class="nav-link active" href="index.html">Garena Freefire</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">PUBG Mobile</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">COD Mobile</a> </li>
+          <li class="nav-item"> <a class="nav-link" href="#">Mobile Legends</a> </li>
+        </ul>
+      </div>
+    </div>
+    <!-- Secondary Navigation end -->
+    
+    <section class="container">
+      <div class="bg-light shadow-md rounded p-4">
+        <div class="row"> 
+          
+          <!-- Mobile Recharge
+          ============================================= -->
+          <div class="col-lg-4 mb-4 mb-lg-0">
+            <h2 class="text-4 mb-3">Garena Freefire Direct Topup</h2>
+            
+            <form action="payment-step01.php" method="post">
+              
+              <div class="mb-3">
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input id="prepaid" name="rechargeBillpayment" class="custom-control-input" checked="" required type="radio">
+                  <label class="custom-control-label" for="prepaid">Player ID</label>
+                </div>
+                <div class="custom-control custom-radio custom-control-inline">
+                  <input id="postpaid" name="rechargeBillpayment" class="custom-control-input" required type="radio">
+                  <label class="custom-control-label" for="postpaid">Facebook</label>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="number" id="playerNumber" placeholder="Enter Player ID" required>
+              </div>
+              <div class="form-group">
+                <select class="custom-select" id="server" required="">
+                  <option value="">Select Your server</option>
+                  <option>Singapore</option>
+                  <option>India</option>
+                  <option>Mena</option>
+                  <option>North America</option>
+                  <option>Pakistan</option>
+                  
+                  
+                  </select>
+              </div>
+              <div class="form-group input-group">
+                <div class="input-group-prepend"> <span class="input-group-text">$</span> </div>
+                <a href="#" data-target="#view-plans" data-toggle="modal" class="view-plans-link"></a>
+                <input class="form-control" name="amount" placeholder="Enter Redeem Code" pattern="^[123456789123]{12}" required type="text">
+              </div>
+              
+              <center>
+              <button style="background-color:red;padding:5px 120px;color:#fff;border-radius:5px;text-decoration:none;"> 
+              <b>Topup</b> </button>
+              </center>
+               
+               </form>
+          </div>
+          <!-- Mobile Recharge end --> 
+          
+          <!-- Slideshow
+          ============================================= -->
+          <div class="col-lg-8">
+            <div class="owl-carousel owl-theme single-slider" data-animateout="fadeOut" data-animatein="fadeIn" data-autoplay="true" data-loop="true" data-autoheight="true" data-nav="true" data-items="1">
+              <div class="item"><a href="#"><img class="img-fluid" src="images/slider/banner-1.jpg" alt="banner 1" /></a></div>
+              <div class="item"><a href="#"><img class="img-fluid" src="images/slider/banner-2.jpg" alt="banner 2" /></a></div>
+            </div>
+          </div>
+          <!-- Slideshow end --> 
+          
+        </div>
+      </div>
+    </section>
+    
+
+
+<!-- Modal Dialog - Login/Signup
+============================================= -->
+<div id="login-signup" class="modal fade" role="dialog" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content p-sm-3">
+      <div class="modal-body">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
+        <ul class="nav nav-tabs" role="tablist">
+          <li class="nav-item"> <a id="login-tab" class="nav-link active text-4" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a> </li>
+          <li class="nav-item"> <a id="signup-tab" class="nav-link text-4" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign Up</a> </li>
+        </ul>
+        <div class="tab-content pt-4">
+          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
+            <form id="loginForm" method="post">
+              <div class="form-group">
+                <input type="email" class="form-control" id="loginMobile" required placeholder="Mobile or Email ID">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="loginPassword" required placeholder="Password">
+              </div>
+              <div class="row mb-4">
+                <div class="col-sm">
+                  <div class="form-check custom-control custom-checkbox">
+                    <input id="remember-me" name="remember" class="custom-control-input" type="checkbox">
+                    <label class="custom-control-label" for="remember-me">Remember Me</label>
+                  </div>
+                </div>
+                <div class="col-sm text-right"> <a class="justify-content-end" href="#">Forgot Password ?</a> </div>
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">Login</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
+            <form id="signupForm" method="post">
+              <div class="form-group">
+                <input type="text" class="form-control" data-bv-field="number" id="signupEmail" required placeholder="Email ID">
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" id="signupMobile" required placeholder="Mobile Number">
+              </div>
+              <div class="form-group">
+                <input type="password" class="form-control" id="signuploginPassword" required placeholder="Password">
+              </div>
+              <button class="btn btn-primary btn-block" type="submit">Signup</button>
+            </form>
+          </div>
+          <div class="d-flex align-items-center my-4">
+            <hr class="flex-grow-1">
+            <span class="mx-2">OR</span>
+            <hr class="flex-grow-1">
+          </div>
+          <div class="row">
+            <div class="col-12 mb-3">
+              <button type="button" class="btn btn-block btn-outline-primary">Login with Facebook</button>
+            </div>
+            <div class="col-12">
+              <button type="button" class="btn btn-block btn-outline-danger">Login with Google</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal Dialog - Login/Signup end --> 
+
+<center>
+<br><br>
+2020 © Nayem Technology Ltd.</center>
+<br><br><br><br>
+<!-- Script --> 
+<script src="http://demo.harnishdesign.net/html/quickai/vendor/jquery/jquery.min.js"></script> 
+<script src="http://demo.harnishdesign.net/html/quickai/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
+<script src="http://demo.harnishdesign.net/html/quickai/vendor/owl.carousel/owl.carousel.min.js"></script> 
+<script src="http://demo.harnishdesign.net/html/quickai/js/theme.js"></script>
+</body>
+</html>
