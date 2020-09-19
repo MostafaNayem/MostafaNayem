@@ -1,254 +1,208 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
 
-<title>Leak Studio - Topup</title>
+<style type="text/css">
 
-<!-- Web Fonts
-============================================= -->
-<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900' type='text/css'>
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
 
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
-<!-- Stylesheet
-============================================= -->
-<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/vendor/bootstrap/css/bootstrap.min.css" />
-<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/vendor/font-awesome/css/all.min.css" />
-<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/vendor/owl.carousel/assets/owl.carousel.min.css" />
-<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/vendor/owl.carousel/assets/owl.theme.default.min.css" />
-<link rel="stylesheet" type="text/css" href="http://demo.harnishdesign.net/html/quickai/css/stylesheet.css" />
+.background {
+  padding: 0 25px 25px;
+  position: relative;
+  width: 100%;
+}
+
+.background::after {
+  content: '';
+  background: #60a9ff;
+  background: -moz-linear-gradient(top, #60a9ff 0%, #4394f4 100%);
+  background: -webkit-linear-gradient(top, #60a9ff 0%,#4394f4 100%);
+  background: linear-gradient(to bottom, #60a9ff 0%,#4394f4 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#60a9ff', endColorstr='#4394f4',GradientType=0 );
+  height: 00px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+@media (min-width: 900px) {
+  .background {
+    padding: 0 0 25px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 50px 0 0;
+  max-width: 960px;
+  width: 100%;
+}
+
+.panel {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px 25px;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.pricing-table {
+  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.08), 0px 20px 31px 3px rgba(0, 0, 0, 0.09), 0px 8px 20px 7px rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 900px) {
+  .pricing-table {
+    flex-direction: row;
+  }
+}
+
+.pricing-table * {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.pricing-plan {
+  border-bottom: 1px solid #e1f1ff;
+  padding: 25px;
+}
+
+.pricing-plan:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 900px) {
+  .pricing-plan {
+    border-bottom: none;
+    border-right: 1px solid #e1f1ff;
+    flex-basis: 100%;
+    padding: 25px 50px;
+  }
+
+  .pricing-plan:last-child {
+    border-right: none;
+  }
+}
+
+.pricing-img {
+  margin-bottom: 25px;
+  max-width: 100%;
+}
+
+.pricing-header {
+  color: #888;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.pricing-features {
+  color: #016FF9;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 50px 0 25px;
+}
+
+.pricing-features-item {
+  border-top: 1px solid #e1f1ff;
+  font-size: 12px;
+  line-height: 1.5;
+  padding: 15px 0;
+}
+
+.pricing-features-item:last-child {
+  border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-price {
+  color: #016FF9;
+  display: block;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.pricing-button {
+  border: 1px solid #9dd1ff;
+  border-radius: 10px;
+  color: #348EFE;
+  display: inline-block;
+  margin: 25px 0;
+  padding: 15px 35px;
+  text-decoration: none;
+  transition: all 150ms ease-in-out;
+}
+
+.pricing-button:hover,
+.pricing-button:focus {
+  background-color: #e1f1ff;
+}
+
+.pricing-button.is-featured {
+  background-color: #48aaff;
+  color: #fff;
+}
+
+.pricing-button.is-featured:hover,
+.pricing-button.is-featured:active {
+  background-color: #269aff;
+}
+
+
+
+</style>
+
 </head>
 <body>
-<!-- Preloader -->
-<div id="preloader">
-  <div data-loader="dual-ring"></div>
-</div>
-<!-- Preloader End --> 
 
-<!-- Document Wrapper   
-============================================= -->
-<div id="main-wrapper"> 
-  
-  <!-- Header
-  ============================================= -->
-  <header id="header">
-    <div class="container">
-      <div class="header-row">
-        <div class="header-column justify-content-start"> 
-          
-          <!-- Logo
-          ============================================= -->
-          <div class="logo"> <a href="index.html" title="Leak Studio"><img src="ls-logo.png" alt="Leak Studio" width="127" height="29" /></a> </div>
-          <!-- Logo end --> 
-          
-        </div>
-        <div class="header-column justify-content-end"> 
-          
-          <!-- Primary Navigation
-          ============================================= -->
-          <nav class="primary-menu navbar navbar-expand-lg">
-            <div id="header-nav" class="collapse navbar-collapse">
-              <ul class="navbar-nav">
-                <li class="dropdown active"> <a class="dropdown-toggle" href="#">Home</a>
-                  <ul class="dropdown-menu">
-                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">Freefire Topup</a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="index.html">Direct Topup</a></li>
-                        <li><a class="dropdown-item" href="booking-hotels.html">Ingame Purchase</a></li>
-                      </ul>
-                    </li>
-                    <li class="dropdown"><a class="dropdown-item dropdown-toggle" href="#">PUBG Mobile</a>
-                      <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="index-2.html">Direct Topup</a></li>
-                        <li><a class="dropdown-item" href="booking-hotels-2.html">Ingame Purchase</a></li>
-                      </ul>
-                    </li>
-                    </ul>
-                </li>
-                
-           
-                <li class="login-signup ml-lg-2"><a class="pl-lg-4 pr-0" data-toggle="modal" data-target="#login-signup" href="#" title="Login / Sign up">Login / Sign up <span class="d-none d-lg-inline-block"><i class="fas fa-user"></i></span></a></li>
-              </ul>
-            </div>
-          </nav>
-          <!-- Primary Navigation end --> 
-          
-        </div>
-        
-        <!-- Collapse Button
-        ============================================= -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#header-nav"> <span></span> <span></span> <span></span> </button>
-      </div>
-    </div>
-  </header>
-  <!-- Header end --> 
-  
-  
-  
-  
-  <!-- Content
-  ============================================= -->
-  <div id="content"> 
-    
-    <!-- Secondary Navigation
-    ============================================= -->
-    <div class="bg-secondary">
-      <div class="container">
-        <ul class="nav secondary-nav">
-          <li class="nav-item"> <a class="nav-link active" href="index.html">Garena Freefire</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">PUBG Mobile</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">COD Mobile</a> </li>
-          <li class="nav-item"> <a class="nav-link" href="#">Mobile Legends</a> </li>
+
+<div class="background">
+  <div class="container">
+    <div class="panel pricing-table">
+      
+      
+      
+      <div class="pricing-plan">
+        <img src="https://s28.postimg.cc/ju5bnc3x9/plane.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Leakstudio Weekly Gold</h2>
+        <ul class="pricing-features">
+          <li class="pricing-features-item">Special Role in Leak Studio Page (07 Days)</li>
+          <li class="pricing-features-item">Special weekly card VIP icon in game</li>
+          <li class="pricing-features-item">Claim 60× Diamond daily (Total 420 Diamond)</li>
+         <li class="pricing-features-item">100 Diamond Bonus</li>
+         <li class="pricing-features-item">Total 520 Diamond </li>
+         
         </ul>
+        <span class="pricing-price">৳. 299</span>
+        <a href="#/" class="pricing-button is-featured">Subscribe</a>
       </div>
-    </div>
-    <!-- Secondary Navigation end -->
-    
-    <section class="container">
-      <div class="bg-light shadow-md rounded p-4">
-        <div class="row"> 
-          
-          <!-- Mobile Recharge
-          ============================================= -->
-          <form action="payment-step01.html">
-          <div class="col-lg-4 mb-4 mb-lg-0">
-            <h2 class="text-4 mb-3">Garena Freefire Direct Topup</h2>
-            
-            
-              <div class="mb-3">
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input id="prepaid" name="rechargeBillpayment" class="custom-control-input" checked="" required type="radio">
-                  <label class="custom-control-label" for="prepaid">Player ID</label>
-                </div>
-                <div class="custom-control custom-radio custom-control-inline">
-                  <input id="postpaid" name="rechargeBillpayment" class="custom-control-input" required type="radio">
-                  <label class="custom-control-label" for="postpaid">Facebook</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" name="number" id="playerNumber" placeholder="Enter Player ID" required>
-              </div>
-              <div class="form-group">
-                <select class="custom-select" id="server" required="">
-                  <option value="">Select Your server</option>
-                  <option>Singapore</option>
-                  <option>India</option>
-                  <option>Mena</option>
-                  <option>North America</option>
-                  <option>Pakistan</option>
-                  
-                  
-                  </select>
-              </div>
-              <div class="form-group input-group">
-                <div class="input-group-prepend"> <span class="input-group-text">G</span> </div>
-                <a href="#" data-target="#view-plans" data-toggle="modal" class="view-plans-link"></a>
-                <input class="form-control" name="amount" placeholder="Enter Email" required type="text">
-              </div>
-              
-              <center>
-              <button style="background-color:red;padding:5px 120px;color:#fff;border-radius:5px;text-decoration:none;"> 
-              <b>Topup</b> </button>
-              </center>
-               
-             
-          </div>
-         </form>
-          <!-- Mobile Recharge end --> 
-          
-          <!-- Slideshow
-          ============================================= -->
-          <div class="col-lg-8">
-            <div class="owl-carousel owl-theme single-slider" data-animateout="fadeOut" data-animatein="fadeIn" data-autoplay="true" data-loop="true" data-autoheight="true" data-nav="true" data-items="1">
-              <div class="item"><a href="#"><img class="img-fluid" src="images/slider/banner-1.jpg" alt="banner 1" /></a></div>
-              <div class="item"><a href="#"><img class="img-fluid" src="images/slider/banner-2.jpg" alt="banner 2" /></a></div>
-            </div>
-          </div>
-          <!-- Slideshow end --> 
-          
-        </div>
-      </div>
-    </section>
-    
-
-
-<!-- Modal Dialog - Login/Signup
-============================================= -->
-<div id="login-signup" class="modal fade" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content p-sm-3">
-      <div class="modal-body">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"> <span aria-hidden="true">&times;</span> </button>
-        <ul class="nav nav-tabs" role="tablist">
-          <li class="nav-item"> <a id="login-tab" class="nav-link active text-4" data-toggle="tab" href="#login" role="tab" aria-controls="login" aria-selected="true">Login</a> </li>
-          <li class="nav-item"> <a id="signup-tab" class="nav-link text-4" data-toggle="tab" href="#signup" role="tab" aria-controls="signup" aria-selected="false">Sign Up</a> </li>
+      
+      <div class="pricing-plan">
+        <img src="https://s21.postimg.cc/tpm0cge4n/space-ship.png" alt="" class="pricing-img">
+        <h2 class="pricing-header">Leakstudio Monthly Premium</h2>
+        <ul class="pricing-features">
+           <li class="pricing-features-item">Special role in Leak Studio Page (30 Days)</li>
+          <li class="pricing-features-item">Special Monthly card VIP icon in game</li>
+         <li class="pricing-features-item">Claim 60× Diamond daily (Instantly 100 Bonus)</li>
+         <li class="pricing-features-item">100 Diamond extra Bonus</li>
+         <li class="pricing-features-item">Total 2000 Diamond</li>
+         
         </ul>
-        <div class="tab-content pt-4">
-          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-            <form id="loginForm" method="post">
-              <div class="form-group">
-                <input type="email" class="form-control" id="loginMobile" required placeholder="Mobile or Email ID">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" id="loginPassword" required placeholder="Password">
-              </div>
-              <div class="row mb-4">
-                <div class="col-sm">
-                  <div class="form-check custom-control custom-checkbox">
-                    <input id="remember-me" name="remember" class="custom-control-input" type="checkbox">
-                    <label class="custom-control-label" for="remember-me">Remember Me</label>
-                  </div>
-                </div>
-                <div class="col-sm text-right"> <a class="justify-content-end" href="#">Forgot Password ?</a> </div>
-              </div>
-              <button class="btn btn-primary btn-block" type="submit">Login</button>
-            </form>
-          </div>
-          <div class="tab-pane fade" id="signup" role="tabpanel" aria-labelledby="signup-tab">
-            <form id="signupForm" method="post">
-              <div class="form-group">
-                <input type="text" class="form-control" data-bv-field="number" id="signupEmail" required placeholder="Email ID">
-              </div>
-              <div class="form-group">
-                <input type="text" class="form-control" id="signupMobile" required placeholder="Mobile Number">
-              </div>
-              <div class="form-group">
-                <input type="password" class="form-control" id="signuploginPassword" required placeholder="Password">
-              </div>
-              <button class="btn btn-primary btn-block" type="submit">Signup</button>
-            </form>
-          </div>
-          <div class="d-flex align-items-center my-4">
-            <hr class="flex-grow-1">
-            <span class="mx-2">OR</span>
-            <hr class="flex-grow-1">
-          </div>
-          <div class="row">
-            <div class="col-12 mb-3">
-              <button type="button" class="btn btn-block btn-outline-primary">Login with Facebook</button>
-            </div>
-            <div class="col-12">
-              <button type="button" class="btn btn-block btn-outline-danger">Login with Google</button>
-            </div>
-          </div>
-        </div>
+        <span class="pricing-price">৳. 799</span>
+        <a href="#/" class="pricing-button">Subscribe</a>
       </div>
+      
     </div>
   </div>
 </div>
-<!-- Modal Dialog - Login/Signup end --> 
 
-<center>
-<br><br>
-2020 © Nayem Technology Ltd.</center>
-<br><br><br><br>
-<!-- Script --> 
-<script src="http://demo.harnishdesign.net/html/quickai/vendor/jquery/jquery.min.js"></script> 
-<script src="http://demo.harnishdesign.net/html/quickai/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-<script src="http://demo.harnishdesign.net/html/quickai/vendor/owl.carousel/owl.carousel.min.js"></script> 
-<script src="http://demo.harnishdesign.net/html/quickai/js/theme.js"></script>
 </body>
 </html>
