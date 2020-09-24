@@ -197,11 +197,19 @@ Leak Studio
 <div class="container">
   <div class="progress">
     <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="24" aria-valuemin="0" aria-valuemax="100" style="width:24%">
-      24%
+     <marquee> 100 × Diamond</marquee>
     </div>
   </div>
 </div>
 
+
+<div class="container">
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="05" aria-valuemin="0" aria-valuemax="500" style="width:6%">
+      <marquee>500 × Diamond</marquee>
+    </div>
+  </div>
+</div>
 
 
 <center>
@@ -214,16 +222,31 @@ Leak Studio
 Diamond × 100
 </font>
 </button>
+<center>
+<button id="link" style="background-color:green;padding:5px 40px;color:#fff;border-radius:15px;text-decoration:none;" type="submit">Claim</button>
+</center>
  </td>
 
  
- </td>
+ 
+ <td>
+ <button id="link1" style="background-color:white;padding:40px 40px;color:#fff;border-radius:15px;text-decoration:none;" type="submit">
+ <img src="https://cdngarenanow-a.akamaihd.net/gop/app/0000/100/067/point.png" width="40" height="40">
+ <font color="black"><br>
+ Diamond × 500
+ </font>
+ 
+ </button>
+ <center>
+ <button id="link1" style="background-color:green;padding:5px 40px;color:#fff;border-radius:15px;text-decoration:none;" type="submit">Claim</button>
+ </center>
+</td>
 
 </tr>
 </table>
 <br>
 
- <button id="link" style="background-color:green;padding:5px 40px;color:#fff;border-radius:15px;text-decoration:none;" type="submit">Claim Reward</button>
+
  
 </center>
 
@@ -316,5 +339,33 @@ Diamond × 100
         });
         
         </script>
+        
+        
+        <script type="text/javascript">
+        
+        // Alert Redirect to Another Link
+        $(document).on('click', '#link1', function(e) {
+        swal({
+        title: "500 × Diamond", 
+        text: "You are not eligible to claim this reward.", 
+        type: "error",
+        confirmButtonText: "OK",
+        showCancelButton: true
+        })
+        .then((result) => {
+        if (result.value) {
+        window.location = '#';
+        } else if (result.dismiss === 'cancel') {
+        swal(
+        'Cancelled',
+        'Your stay here :)',
+        'error'
+        )
+        }
+        })
+        });
+        
+        </script>
+        
         </body>
         </html>
