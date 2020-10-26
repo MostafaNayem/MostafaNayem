@@ -78,26 +78,20 @@
                         <br>
                         Registration Fee: <font color="green"> Free </font>
                         <br>
-                        Registered: 00/50
+                        Registered: <font color="red" >00</font> <font color="green">/50</font>
                        
                          </p>
                          
                          
                
-                    <a href="#" class="btn btn-primary" onclick="myFunction()">
+                    <a href="#" class="btn btn-primary" onclick="toastbox('toast-12')">
                         <ion-icon name="cube-outline"></ion-icon>
                         Join
                        
                     </a>
-                         <script>
-                    function myFunction() {
-                    alert("The server will be ready soon!");
-                    }
-                    </script>
+                         
                     
-                    
-                    
-                    <a href="#" class="btn btn-primary">
+                    <a href="#" class="btn btn-primary" onclick="toastbox('toast-12')">
                     <ion-icon name="eye-outline"></ion-icon>
                     Observe
                     
@@ -120,28 +114,35 @@
                     <p class="card-text">
                         Reward: Diamond × 500 + Diamond × 500
                         <br>
-                        Registration Fee: <font color="green"> Paid </font>
+                        Registration Fee: <font color="green"> Free </font>
                         <br>
-                        Registered: 00/50
+                        Registered: <font color="red" >00</font> <font color="green">/50</font>
                        
                          </p>
                          
                          
                
-                    <a href="#" class="btn btn-primary" onclick="myFunction()">
+                    <a href="#" class="btn btn-primary" onclick="toastbox('toast-12')">
                         <ion-icon name="cube-outline"></ion-icon>
                         Join
                        
                     </a>
-                         <script>
-                    function myFunction() {
-                    alert("The server will be ready soon!");
-                    }
-                    </script>
+                         
+                         <!-- toast center iconed -->
+                         <div id="toast-12" class="toast-box toast-center">
+                         <div class="in">
+                         <ion-icon name="alert-outline" class="text-danger"></ion-icon>
+                         <div class="text">
+                         503: Server Error: Back-end server is at capacity
+                         </div>
+                         </div>
+                         <button type="button" class="btn btn-sm btn-text-light close-button">CLOSE</button>
+                         </div>
+                         <!-- toast center iconed -->
+                         
                     
                     
-                    
-                    <a href="#" class="btn btn-primary">
+                    <a href="#" class="btn btn-primary" onclick="toastbox('toast-12')">
                     <ion-icon name="eye-outline"></ion-icon>
                     Observe
                     
@@ -152,6 +153,46 @@
         </div>
         
 
+
+
+
+
+
+
+        <div class="section mt-3 mb-3">
+            <div class="card">
+                <img src="https://images.hdqwalls.com/wallpapers/thumb/garena-free-fire-character-ot.jpg" class="card-img-top" alt="image">
+                <div class="card-body">
+                    <h6 class="card-subtitle">Leak Studio Official Tournament</h6>
+                    <h5 class="card-title">Squad Match</h5>
+                    <p class="card-text">
+                        Reward: Weekly Membership
+                        <br>
+                        Registration Fee: <font color="green"> Free </font>
+                        <br>
+                        Registered: <font color="red" >00</font> <font color="green">/50</font>
+                       
+                         </p>
+                         
+                         
+               
+                    <a href="#" class="btn btn-primary" onclick="toastbox('toast-12')">
+                        <ion-icon name="cube-outline"></ion-icon>
+                        Join
+                       
+                    </a>
+                         
+                    
+                    <a href="#" class="btn btn-primary" onclick="toastbox('toast-12')">
+                    <ion-icon name="eye-outline"></ion-icon>
+                    Observe
+                    
+                    </a>
+                   
+                </div>
+            </div>
+        </div>
+        
 
 <br><br><br>
 
@@ -224,6 +265,16 @@
                             </a>
                         </li>
                         <li>
+                        <a href="ls-login.html" class="item">
+                        <div class="icon-box bg-primary">
+                        <ion-icon name="person-outline"></ion-icon>
+                        </div>
+                        <div class="in">
+                        Login/Register
+                        </div>
+                        </a>
+                        </li>
+                        <li>
                             <a href="#" class="item">
                                 <div class="icon-box bg-primary">
                                     <ion-icon name="cube-outline"></ion-icon>
@@ -274,16 +325,44 @@
                         
                         
                         
-                        
-                        <li>
-                        <a href="#" class="item">
-                        <div class="in">
-                        Server: BOF-GC v.0.01b
-                        </div>
-                       <font color="orange">Overloaded</font>
-                        </a>
-                        </li>
-                        
+                    
+                    <div class="listview-title mt-2"></div>
+                    <ul class="listview link-listview">
+                    <li>
+                    <a href="javascript:;" onclick="toastbox('toast-11')">
+                    Server: BOF-GC v.0.0.9b
+                    </a>
+                    </li>
+                    
+                    </ul>
+                    
+                    
+                    <!-- toast center iconed -->
+                    <div id="toast-11" class="toast-box toast-center">
+                    <div class="in">
+                    <ion-icon name="checkmark-outline" class="text-success"></ion-icon>
+                    <div class="text">
+                    Server Region: Bangladesh
+                    </div>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-text-light close-button">connected</button>
+                    </div>
+                    <!-- toast center iconed -->
+                    
+                    
+                    <!-- toast center iconed -->
+                    <div id="toast-12" class="toast-box toast-center">
+                    <div class="in">
+                    <ion-icon name="success-outline" class="text-danger"></ion-icon>
+                    <div class="text">
+                    503: Server Error: Back-end server is at capacity
+                    </div>
+                    </div>
+                    <button type="button" class="btn btn-sm btn-text-light close-button">CLOSE</button>
+                    </div>
+                    <!-- toast center iconed -->
+                    
+                    
                        
                     </ul>
 
@@ -291,7 +370,7 @@
 
                 <!-- sidebar buttons -->
                 <div class="sidebar-buttons">
-                    <a href="javascript:;" class="button">
+                    <a href="ls-reg.html" class="button">
                         <ion-icon name="person-outline"></ion-icon>
                     </a>
                     <a href="javascript:;" class="button">
@@ -300,7 +379,7 @@
                     <a href="javascript:;" class="button">
                         <ion-icon name="settings-outline"></ion-icon>
                     </a>
-                    <a href="javascript:;" class="button">
+                    <a href="index.html" class="button">
                         <ion-icon name="log-out-outline"></ion-icon>
                     </a>
                 </div>
