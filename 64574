@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+     <meta name="theme-color" content="#000000">
+    <title>Leak Studio - Birthday Anniversary</title>
+    <link rel="stylesheet" href="https://mobilekit.bragherstudio.com/view7/assets/css/style.css">
+    <link rel="manifest" href="https://mobilekit.bragherstudio.com/view7/__manifest.json">
+
+
+</head>
+
+<body>
+
+    <!-- loader -->
+    <div id="loader">
+        <div class="spinner-border text-primary" role="status"></div>
+    </div>
+    <!-- * loader -->
+
+   
+ 
+   
+<img src="hbd-ls.jpg" width="710" height="340" onClick="notification('notification-11')">
+   
+   
+   
+   <!-- ios style-->
+                     <div id="notification-11" class="notification-box">
+                     <div class="notification-dialog ios-style">
+                     <div class="notification-header">
+                     <div class="in">
+                     <img src="ls-logo.jpg" alt="image" class="imaged w24 rounded">
+                     <strong>Leak Studio</strong>
+                     </div>
+                     <div class="right">
+                     <span>Server: BOF-GC v.0.0.9b</span>
+                     <a href="#" class="close-button">
+                     <ion-icon name="close-circle"></ion-icon>
+                     </a>
+                     </div>
+                     </div>
+                     <div class="notification-content">
+                     <div class="in">
+                     <h3 class="subtitle">2nd Anniversary</h3>
+                     <div class="text">
+                      
+                    
+                    503 Error: Server is at capacity. 
+                      
+                        
+                       </div>
+                     </div>
+                     </div>
+                     <div class="notification-footer">
+                    
+                     <a href="https://drive.google.com/file/d/1073REoIfbk9RbB2DEQGopSmrvJo8nuM3/view" class="notification-button">
+                     <ion-icon name="arrow-down-circle"></ion-icon>
+                     Save
+                     </a>
+                     </div>
+                     </div>
+                     </div>
+                     <!-- * ios style -->
+                     
+                     
+
+    <!-- ///////////// Js Files ////////////////////  -->
+    <!-- Jquery -->
+    <script src="https://mobilekit.bragherstudio.com/view7/assets/js/lib/jquery-3.4.1.min.js"></script>
+    <!-- Bootstrap-->
+    <script src="https://mobilekit.bragherstudio.com/view7/assets/js/lib/popper.min.js"></script>
+    <script src="https://mobilekit.bragherstudio.com/view7/assets/js/lib/bootstrap.min.js"></script>
+    <!-- Ionicons -->
+    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+    <!-- Owl Carousel -->
+    <script src="https://mobilekit.bragherstudio.com/view7/assets/js/plugins/owl-carousel/owl.carousel.min.js"></script>
+    <!-- jQuery Circle Progress -->
+    <script src="https://mobilekit.bragherstudio.com/view7/assets/js/plugins/jquery-circle-progress/circle-progress.min.js"></script>
+    <!-- Base Js File -->
+    <script src="https://mobilekit.bragherstudio.com/view7/assets/js/base.js"></script>
+
+
+<audio src="hbd.mp3" autoplay="autoplay" loop="loop"></audio>
+
+
+<script type="text/javascript">
+alert("Rotate your device to continue.");
+</script>
+ 
+
+</body>
+
+</html> 
