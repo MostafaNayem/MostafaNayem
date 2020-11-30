@@ -26,6 +26,10 @@
 }
 
 </style> 
+
+
+
+ 
 </head>
 
 <body class="bg-white">
@@ -75,7 +79,7 @@
                     <div class="form-group basic">
                         <div class="input-wrapper">
                           
-                            <input type="text" class="form-control" id="name1" placeholder="Enter Player ID" required>
+                            <input type="text" class="form-control" id="name1" placeholder="Enter Player ID" pattern="[0-9]{9,}" required>
                             <i class="clear-input">
                                 <ion-icon name="close-circle"></ion-icon>
                             </i>
@@ -84,8 +88,11 @@
                         </div>
                     </div>
 
-                    
-
+                     <script src="https://www.google.com/recaptcha/api.js"></script>
+                   <!--make sure you copy this key as is-->
+                   <div class="g-recaptcha"
+                   data-sitekey="6LdPHPMZAAAAAPMUYkkluUWqAocl2MbiuhGgpo8s"></div>
+                   
                   
                   
                 
