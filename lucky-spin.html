@@ -1,0 +1,430 @@
+<html>
+<head>
+
+<style type="text/css">
+
+body{
+  font-family: 'Titillium Web', sans-serif;
+  background:#191B28;
+}
+
+.roulette-wrapper{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  width:100%;
+  margin:0 auto;
+  overflow:hidden;
+}
+
+.roulette-wrapper .selector{
+  width:3px;
+  background:grey;
+  left:50%;
+  height:100%;
+  transform:translate(-50%,0%);
+  position:absolute;
+  z-index:2;
+}
+
+.roulette-wrapper .wheel{
+  display:flex;
+}
+
+.roulette-wrapper .wheel .row{
+  display:flex;
+}
+
+.roulette-wrapper .wheel .row .card{
+  height:75px;
+  width:75px;
+  margin:3px;
+  border-radius:8px;
+  border-bottom:3px solid rgba(0,0,0,0.2);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:1.5em;
+}
+
+.card.red{
+  background:#F95146;
+}
+
+.card.black{
+  background:#2D3035;
+}
+
+.card.green{
+  background:#00C74D;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+</style>
+<!-- jQuery -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+ <!-- SweetAlert2 -->
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+  
+
+</head>
+
+<body>
+
+
+<link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<br><br><br>
+<div class="roulette-wrapper">
+  <div class="selector"></div>
+  <div class="wheel"></div>
+</div>
+<div class="roulette-wrapper">
+  <div class="selector"></div>
+  <div class="wheel"></div>
+</div>
+
+<br><br>
+<div>
+  <center>
+  <button id ="success" style="background-color:red;padding:6px 50px;color:#fff;border-radius:10px;text-decoration:none;" type="submit">
+  
+  <b>Normal Spin</b></button>
+ 
+  <button id="success5" style="background-color:green;padding:6px 50px;color:#fff;border-radius:10px;text-decoration:none;" type="submit">
+  
+  <b>Mega Spin</b></button>
+  </center>
+  
+  
+</div>
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	//setup multiple rows of colours, can also add and remove while spinning but overall this is easier.
+	initWheel();
+ 
+ 	$('button').on('click', function(){
+		var outcome = parseInt($('input').val());
+    spinWheel(outcome);
+  });
+});
+
+function initWheel(){
+	var $wheel = $('.roulette-wrapper .wheel'),
+  		row = "";
+      
+  row += "<div class='row'>";
+  row += "  <div class='card red'>1<\/div>";
+  row += "  <div class='card black'>14<\/div>";
+  row += "  <div class='card red'>Hayato<\/div>";
+  row += "  <div class='card black'>399<\/div>";
+  row += "  <div class='card red'>3<\/div>";
+  row += "  <div class='card black'>Alok<\/div>";
+  row += "  <div class='card green'>4<\/div>";
+  row += "  <div class='card red'>D × 520<\/div>";
+  row += "  <div class='card black'>D × 100<\/div>";
+  row += "  <div class='card red'>5<\/div>";
+  row += "  <div class='card black'>Scanner<\/div>";
+  row += "  <div class='card red'>6<\/div>";
+  row += "  <div class='card black'>999<\/div>";
+  row += "  <div class='card red'>7<\/div>";
+  row += "  <div class='card black'>Bounty Token<\/div>";
+  row += "<\/div>";
+  
+	for(var x = 0; x < 29; x++){
+  	$wheel.append(row);
+  }
+}
+
+function spinWheel(roll){
+  var $wheel = $('.roulette-wrapper .wheel'),
+  		order = [0, 11, 5, 10, 6, 9, 7, 8, 1, 14, 2, 13, 3, 12, 4],
+      position = order.indexOf(roll);
+            
+  //determine position where to land
+  var rows = 12,
+  		card = 75 + 3 * 2,
+      landingPosition = (rows * 15 * card) + (position * card);
+  	
+  var randomize = Math.floor(Math.random() * 75) - (75/2);
+    
+  landingPosition = landingPosition + randomize;
+    
+  var object = {
+		x: Math.floor(Math.random() * 50) / 100,
+    y: Math.floor(Math.random() * 20) / 100
+	};
+  
+  $wheel.css({
+		'transition-timing-function':'cubic-bezier(0,'+ object.x +','+ object.y + ',1)',
+		'transition-duration':'6s',
+		'transform':'translate3d(-'+landingPosition+'px, 0px, 0px)'
+	});
+  
+  setTimeout(function(){
+		$wheel.css({
+			'transition-timing-function':'',
+			'transition-duration':'',
+		});
+    
+    var resetTo = -(position * card + randomize);
+		$wheel.css('transform', 'translate3d('+resetTo+'px, 0px, 0px)');
+  }, 6 * 1000);
+}
+
+
+</script>
+
+
+
+<script type="text/javascript">
+
+$(document).ready(function() {
+	//setup multiple rows of colours, can also add and remove while spinning but overall this is easier.
+	initWheel();
+ 
+ 	$('button').on('click', function(){
+		var outcome = parseInt($('input').val());
+    spinWheel(outcome);
+  });
+});
+
+function initWheel(){
+	var $wheel = $('.roulette-wrapper .wheel'),
+  		row = "";
+      
+  row += "<div class='row'>";
+  row += "  <div class='card red'>Diamond × 310<\/div>";
+  row += "  <div class='card black'>14<\/div>";
+  row += "  <div class='card red'>Bounty Token<\/div>";
+  row += "  <div class='card black'>100<\/div>";
+  row += "  <div class='card red'>3<\/div>";
+  row += "  <div class='card black'>Alok<\/div>";
+  row += "  <div class='card green'>4<\/div>";
+  row += "  <div class='card red'>D × 30<\/div>";
+  row += "  <div class='card black'>D × 100<\/div>";
+  row += "  <div class='card red'>5<\/div>";
+  row += "  <div class='card black'>Scanner<\/div>";
+  row += "  <div class='card red'>6<\/div>";
+  row += "  <div class='card black'>Alok<\/div>";
+  row += "  <div class='card red'>1<\/div>";
+  row += "  <div class='card black'>3<\/div>";
+  row += "<\/div>";
+  
+	for(var x = 0; x < 29; x++){
+  	$wheel.append(row);
+  }
+}
+
+function spinWheel(roll){
+  var $wheel = $('.roulette-wrapper .wheel'),
+  		order = [0, 11, 5, 10, 6, 9, 7, 8, 1, 14, 2, 13, 3, 12, 4],
+      position = order.indexOf(roll);
+            
+  //determine position where to land
+  var rows = 12,
+  		card = 75 + 3 * 2,
+      landingPosition = (rows * 15 * card) + (position * card);
+  	
+  var randomize = Math.floor(Math.random() * 75) - (75/2);
+    
+  landingPosition = landingPosition + randomize;
+    
+  var object = {
+		x: Math.floor(Math.random() * 50) / 100,
+    y: Math.floor(Math.random() * 20) / 100
+	};
+  
+  $wheel.css({
+		'transition-timing-function':'cubic-bezier(0,'+ object.x +','+ object.y + ',1)',
+		'transition-duration':'6s',
+		'transform':'translate3d(-'+landingPosition+'px, 0px, 0px)'
+	});
+  
+  setTimeout(function(){
+		$wheel.css({
+			'transition-timing-function':'',
+			'transition-duration':'',
+		});
+    
+    var resetTo = -(position * card + randomize);
+		$wheel.css('transform', 'translate3d('+resetTo+'px, 0px, 0px)');
+  }, 6 * 1000);
+}
+
+
+</script>
+
+
+
+
+
+<script type="text/javascript">
+ // Alert Modal Type
+ $(document).on('click', '#success', function(e) {
+ swal(
+ 'Normal Spin',
+ '',
+ 'success'
+ )
+ });
+
+
+// Alert Modal Type
+$(document).on('click', '#success5', function(e) {
+swal(
+'Mega Spin',
+'',
+'success'
+)
+});
+
+
+
+
+ $(document).on('click', '#error', function(e) {
+ swal(
+ 'Error!',
+ 'Account region does not match the shop region.',
+ 'error'
+ )
+ });
+ 
+ $(document).on('click', '#warning', function(e) {
+ swal(
+ 'Warning!',
+ 'You clicked the <b style="color:coral;">warning</b> button!',
+ 'warning'
+ )
+ });
+ 
+ $(document).on('click', '#info', function(e) {
+ swal(
+ '',
+ 'The server will be <b style="color:cornflowerblue;">ready</b> soon!',
+ 'info'
+ )
+ });
+ 
+ $(document).on('click', '#question', function(e) {
+ swal(
+ 'Question!',
+ 'You clicked the <b style="color:grey;">question</b> button!',
+ 'question'
+ )
+ });
+ 
+ // Alert With Custom Icon and Background Image
+ $(document).on('click', '#icon', function(event) {
+ swal({
+ title: 'Custom icon!',
+ text: 'Alert with a custom image.',
+ imageUrl: 'https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg',
+ imageWidth: 200,
+ imageHeight: 200,
+ imageAlt: 'Custom image',
+ animation: false
+ })
+ });
+ 
+ $(document).on('click', '#image', function(event) {
+ swal({
+ title: 'Custom background image, width and padding.',
+ width: 700,
+ padding: 150,
+ background: '#fff url(https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg)'
+ })
+ });
+ 
+ // Alert With Input Type
+ $(document).on('click', '#subscribe', function(e) {
+ swal({
+ title: 'Submit email to subscribe',
+ input: 'email',
+ inputPlaceholder: 'Example@email.xxx',
+ showCancelButton: true,
+ confirmButtonText: 'Submit',
+ showLoaderOnConfirm: true,
+ preConfirm: (email) => {
+ return new Promise((resolve) => {
+ setTimeout(() => {
+ if (email === 'example@email.com') {
+ swal.showValidationError(
+ 'This email is already taken.'
+ )
+ }
+ resolve()
+ }, 2000)
+ })
+ },
+ allowOutsideClick: false
+ }).then((result) => {
+ if (result.value) {
+ swal({
+ type: 'success',
+ title: 'Thank you for subscribe!',
+ html: 'Submitted email: ' + result.value
+ })
+ }
+ })
+ });
+ 
+ // Alert Redirect to Another Link
+ $(document).on('click', '#link', function(e) {
+ swal({
+ title: "Are you sure?", 
+ text: "You will be redirected to payment center", 
+ type: "warning",
+ confirmButtonText: "Confirm",
+ showCancelButton: true
+ })
+ .then((result) => {
+ if (result.value) {
+ window.location = 'en-garena-card-freefire-topup-mena.html';
+ } else if (result.dismiss === 'cancel') {
+ swal(
+ 'Cancelled',
+ 'Your stay here :)',
+ 'error'
+ )
+ }
+ })
+ });
+
+
+
+// Alert Redirect to Another Link
+ $(document).on('click', '#linkglobal', function(e) {
+ swal({
+ title: "Are you sure?", 
+ text: "You will be redirected to payment center", 
+ type: "warning",
+ confirmButtonText: "Confirm",
+ showCancelButton: true
+ })
+ .then((result) => {
+ if (result.value) {
+ window.location = 'en-garena-card-freefire-topup-global.html';
+ } else if (result.dismiss === 'cancel') {
+ swal(
+ 'Cancelled',
+ 'Your stay here :)',
+ 'error'
+ )
+ }
+ })
+ });
+ </script>
+
+
+
+</body>
+</html>
