@@ -2,8 +2,6 @@
 <html lang="en">
 
 <head>
-
-
  <meta property="og:image" content="ls-logo.jpg" />
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -23,87 +21,58 @@
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
  
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    
+ <style>
+ * {
+ box-sizing: border-box;
+ }
+ 
+ .columns {
+ float: center;
+ width: 33.3%;
+ padding: 8px;
+ }
+ 
+ .price {
+ list-style-type: none;
+ border: 1px solid #eee;
+ margin: 0;
+ padding: 0;
+ -webkit-transition: 0.3s;
+ transition: 0.3s;
+ }
+ 
+ .price:hover {
+ box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+ }
  
  
- <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
-    <script type='text/javascript'>
-        $(function () {
-            var overlay = $('<div id="overlay"></div>');
-            overlay.show();
-            overlay.appendTo(document.body);
-            $('.popup').show();
-            $('.close').click(function () {
-                $('.popup').hide();
-                overlay.appendTo(document.body).remove();
-                return false;
-            });
  
-            $('.x').click(function () {
-                $('.popup').hide();
-                overlay.appendTo(document.body).remove();
-                return false;
-            });
-        });
-    </script>
-    
-    <style>
-    * {
-    box-sizing: border-box;
-    }
-    
-    .columns {
-    float: left;
-    width: 33.3%;
-    padding: 8px;
-    }
-    
-    .price {
-    list-style-type: none;
-    border: 1px solid #eee;
-    margin: 0;
-    padding: 0;
-    -webkit-transition: 0.3s;
-    transition: 0.3s;
-    }
-    
-    .price:hover {
-    box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
-    }
-    
-    .price .header {
-    background-color: #111;
-    color: white;
-    font-size: 25px;
-    }
-    
-    .price li {
-    border-bottom: 1px solid #eee;
-    padding: 20px;
-    text-align: center;
-    }
-    
-    .price .grey {
-    background-color: orange;
-    font-size: 40px;
-    }
-    
-    .button {
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: 10px 25px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    }
-    
-    @media only screen and (max-width: 600px) {
-    .columns {
-    width: 100%;
-    }
-    }
-    </style>
+ .price li {
+ border-bottom: 1px solid #eee;
+ padding: 20px;
+ text-align: center;
+ }
  
+ .price .grey {
+ background-color: #E67E22;
+ font-size: 20px;
+ 
+ }
+ 
+ 
+ 
+ @media only screen and (max-width: 600px) {
+ .columns {
+ width: 80%;
+ }
+ }
+ </style>
 </head>
 
 <body class="theme-light" data-background="none" data-highlight="red1">
@@ -112,60 +81,198 @@
   
   
 
-    <div class="header header-fixed header-logo-center">
-     <a href="index.html" class="header-title"><b>LEAK STUDIO </b> </a>
-      <a class="header-icon header-icon-4"><i class="fa fa-wifi"></i></a> 
-      
-      <a href="index.html" class="header-icon header-icon-2"><i class="fa fa-sign-out"></i></a>
-      
-      <a class="header-icon header-icon-3">
-      
-      <select id="Region">
-       <option value="mena">Mena</option>
-       <option value="eu">Europe</option>
-      <option value="in"selected>India</option>
-      </select>
-      </a>
-      <a class="header-icon header-icon-1"><i class="fa fa-bars"></i></a> 
-      
-      </div>
-    
- <br><br><br>
- 
- 
- 
- 
- <div class="columns">
- <ul class="price">
- 
- <li class="grey">
- 
- <font color="white" face="courier"><b>Thank you!</b></font>
- 
- </li>
- 
- <li>
- <center>
- <img src="https://cdn.freelogovectors.net/wp-content/uploads/2019/01/garena-logo.png" width="100" height="30">
- Garena Online PTE LTD.
- </center>
- </li>
- 
- <li><strong>Your purchase confirmed!</strong> </li>
- <li>
- Diamonds will be added in your Account shortly.
- </li>
- 
- <center>
- <a href="index.html" class="button">Make another purchase</a>
- </center>
- </ul>
- </div>
- 
- 
- 
-     
+  
+    <table border="0">
+  <tr>
+  
+<td>
+ <button style="background-color:white;padding:5px 5px;color:#fff;border-radius:5px;text-decoration:none;" type="submit">
 
+</button>
+ </td>
+ 
+ 
+  <td>
+  <img src="https://cdn.freelogovectors.net/wp-content/uploads/2019/01/garena-logo.png" height="30" width="85">
+
+  </td>
+  
+ <td>
+  <button style="background-color:white;padding:10px 20px;color:#fff;border-radius:5px;text-decoration:none;" type="submit">
+  <p align="left"> <font color="white">
+  Secure Transection
+  </font></p></button>
+  </td>
+  
+  <td>
+  <button style="background-color:white;padding: 6px 6px;color:#fff;border-radius:5px;text-decoration:none;" type="submit">
+  <font color="black">
+  <i class="fa fa-lock"></i>
+  </font></button>
+  </td>
+  
+  <td>
+  <button style="background-color:white;padding: 5px 5px;color:#fff;border-radius:5px;text-decoration:none;" type="submit">
+ </button>
+  </td>
+  </tr>
+  </table>
+  
+  
+  
+  <center>
+  <h1>
+  Thank you :)
+  </h1>
+  Your purchase is confirmed!
+  
+  <br><br>
+  <br><br><br>
+  
+  Please click the button below to continue to Garena Codapay.
+ 
+  <br><br>
+ 
+  <a href="index.html">
+  <button style="background-color:orange;padding: 20px 80px;color:#fff;border-radius:5px;text-decoration:none;" type="submit">
+  <font color="white">
+ <b> Continue to marchent </b>
+  </font></button>
+    </a>
+    
+    <br>
+   
+    <font color="black">
+  <div class="columns">
+  <ul class="price">
+  
+  <li>
+  <font color="black">
+  <sub>INVOICE NUMBER</sub>
+  <br>
+  
+  <body onload="createCaptcha()">
+  <form onsubmit="validateCaptcha()">
+ 
+  <div id="captcha">
+  </div>
+  </form>
+  
+  </body>
+  
+  
+  <script type="text/javascript">
+  var code;
+  function createCaptcha() {
+  //clear the contents of captcha div first 
+  document.getElementById('captcha').innerHTML = "";
+  var charsArray =
+  "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lengthOtp = 36;
+  var captcha = [];
+  for (var i = 0; i < lengthOtp; i++) {
+  //below code will not allow Repetition of Characters
+  var index = Math.floor(Math.random() * charsArray.length + 1); //get the next character from the array
+  if (captcha.indexOf(charsArray[index]) == -1)
+  captcha.push(charsArray[index]);
+  else i--;
+  }
+  var canv = document.createElement("canvas");
+  canv.id = "captcha";
+  canv.width = 200;
+  canv.height = 50;
+  var ctx = canv.getContext("2d");
+  ctx.font = "20px";
+  ctx.strokeText(captcha.join(""), 0, 30);
+  //storing captcha so that can validate you can save it somewhere else according to your specific requirements
+  code = captcha.join("");
+  document.getElementById("captcha").appendChild(canv); // adds the canvas to the body element
+  }
+  function validateCaptcha() {
+  event.preventDefault();
+  debugger
+  if (document.getElementById("cpatchaTextBox").value == code) {
+  alert("Valid Captcha")
+  }else{
+  alert("Invalid Captcha. try Again");
+  createCaptcha();
+  }
+  }
+  
+  </script>
+  
+  </font>
+  </li>
+  
+  <li>
+  <sub>MERCHANT</sub>
+  <br>
+  Garena CodaPay
+  </li>
+  
+  
+  <li>
+  <sub>DATE</sub>
+  <br><center>
+  <iframe src="http://free.timeanddate.com/clock/i7o7u3ej/n73/tt1/tw0" frameborder="0" width="127" height="19"></iframe>
+  </center>
+  </li>
+  
+  <li>
+  <sub>TIME</sub>
+  <br><center>
+ <iframe src="http://free.timeanddate.com/clock/i7o7ujy2/n941/ts1" frameborder="0" width="96" height="19"></iframe>
+ </center>
+  </li>
+  
+  
+  <li>
+  <sub>ITEM</sub>
+  <br>
+  Diamond × 50
+  </li>
+  
+  
+  <li>
+  <sub>VAT RATE</sub>
+  <br>
+  18.0%
+  </li>
+  
+  
+  <li>
+  <sub>TOTAL PAID</sub>
+  <br>
+   ₹ 40
+  </li>
+  
+  </ul>
+  </div>
+  
+  
+  
+  
+  
+    
+  <br><br>
+   <sup>
+   <b>
+   CODA PAYMENTS INDIA PRIVATE LIMITED (SGTIN: 33AAHCC6828J1JH, HSN: 998436)
+   <br></b>
+   New no19, Playground view street, Nandhanam Extension,
+   
+   Nandhanam,
+   <br>
+ CHENNAI, Chennai, Tamil Nadu, India, 600035
+   
+   
+
+   </sup>
+  
+<br><br>
+     </center></font>
+      
+     
     </div>
     <!--Menu Settings-->
     <div style="display:none">
@@ -179,8 +286,125 @@
     <div class="menu-hider"></div>
   </div>
 
-
-
+<script type="text/javascript">
+ // Alert Modal Type
+ $(document).on('click', '#success', function(e) {
+ swal(
+ 'Success',
+ 'You clicked the <b style="color:green;">Success</b> button!',
+ 'success'
+ )
+ });
+ 
+ $(document).on('click', '#error', function(e) {
+ swal(
+ 'Error!',
+ 'Account region does not match the shop region. Click “Proceed” to go to the correct shop: <b style="color:red;">India</b>',
+ 'error'
+ )
+ });
+ 
+ $(document).on('click', '#warning', function(e) {
+ swal(
+ 'Warning!',
+ 'You clicked the <b style="color:coral;">warning</b> button!',
+ 'warning'
+ )
+ });
+ 
+ $(document).on('click', '#info', function(e) {
+ swal(
+ '',
+ 'The server will be <b style="color:cornflowerblue;">ready</b> soon!',
+ 'info'
+ )
+ });
+ 
+ $(document).on('click', '#question', function(e) {
+ swal(
+ 'Question!',
+ 'You clicked the <b style="color:grey;">question</b> button!',
+ 'question'
+ )
+ });
+ 
+ // Alert With Custom Icon and Background Image
+ $(document).on('click', '#icon', function(event) {
+ swal({
+ title: 'Custom icon!',
+ text: 'Alert with a custom image.',
+ imageUrl: 'https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg',
+ imageWidth: 200,
+ imageHeight: 200,
+ imageAlt: 'Custom image',
+ animation: false
+ })
+ });
+ 
+ $(document).on('click', '#image', function(event) {
+ swal({
+ title: 'Custom background image, width and padding.',
+ width: 700,
+ padding: 150,
+ background: '#fff url(https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg)'
+ })
+ });
+ 
+ // Alert With Input Type
+ $(document).on('click', '#subscribe', function(e) {
+ swal({
+ title: 'Submit email to subscribe',
+ input: 'email',
+ inputPlaceholder: 'Example@email.xxx',
+ showCancelButton: true,
+ confirmButtonText: 'Submit',
+ showLoaderOnConfirm: true,
+ preConfirm: (email) => {
+ return new Promise((resolve) => {
+ setTimeout(() => {
+ if (email === 'example@email.com') {
+ swal.showValidationError(
+ 'This email is already taken.'
+ )
+ }
+ resolve()
+ }, 2000)
+ })
+ },
+ allowOutsideClick: false
+ }).then((result) => {
+ if (result.value) {
+ swal({
+ type: 'success',
+ title: 'Thank you for subscribe!',
+ html: 'Submitted email: ' + result.value
+ })
+ }
+ })
+ });
+ 
+ // Alert Redirect to Another Link
+ $(document).on('click', '#link', function(e) {
+ swal({
+ title: "Are you sure?", 
+ text: "You will be redirected to payment center", 
+ type: "warning",
+ confirmButtonText: "Confirm",
+ showCancelButton: true
+ })
+ .then((result) => {
+ if (result.value) {
+ window.location = 'en-garena-card-freefire-topup-mena.html';
+ } else if (result.dismiss === 'cancel') {
+ swal(
+ 'Cancelled',
+ 'Your stay here :)',
+ 'error'
+ )
+ }
+ })
+ });
+ </script>
 
 
 
@@ -188,4 +412,4 @@
   <script src="https://www.clashofmagic.cc/scripts/jquery.js"></script>
   <script src="https://www.clashofmagic.cc/scripts/plugins.js"></script>
   <script src="https://www.clashofmagic.cc/scripts/custom.js"></script>
-</body>
+</body></html>
