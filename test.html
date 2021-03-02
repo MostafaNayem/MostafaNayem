@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, shrink-to-fit=9">
-<meta name="description" content="Gambolthemes">
-<meta name="author" content="Gambolthemes">
+<meta name="description" content="দ্বীনিয়াত লাইব্রেরী">
+<meta name="author" content="দ্বীনিয়াত লাইব্রেরি">
 <title>দ্বীনিয়াত লাইব্রেরী</title>
 
 <link href="unicons.css" rel="stylesheet">
@@ -28,6 +28,45 @@
    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
    
 
+<style type="text/css">
+
+.modal {
+	z-index: 10;
+	display: block;
+	padding-top: 150px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgb(0,0,0);
+	background-color: rgba(0,0,0,0.5)
+}
+.modal-content {
+	margin: auto;
+	background-color: #fff;
+	position: relative;
+	padding: 0;
+	outline: 0;
+	max-width: 600px
+}
+.modal-inner { padding: 20px 30px; }
+.modal-close {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: absolute;
+	right: 0;
+	top: 0;
+	background: #ccc;
+	padding: 6px 10px;
+}
+.animate-opacity { animation: opac 0.8s }@keyframes opac{from{opacity:0} to{opacity:1}}
+</style>
 
 </head>
 <body>
@@ -35,7 +74,47 @@
 
 
 
-
+<div id="modal-1" class="modal animate-opacity">
+   <div class="modal-content">
+      <div class="modal-inner">
+         <span onclick="document.getElementById('modal-1').style.display='none'" class="modal-close">&times;</span>
+           <center>
+           <h4>BETA TEST PROGRAMME </h4>
+           <p>
+           
+        <b>   BECAME A BETA TESTER NOW AND GET
+           <br> EXCLUSIVE BENEFITS<br></b>
+    
+         You'll see new features before the public does. Give your feedback to
+         the developers to help them improve.
+         <br>
+         Note: You can leave the beta test any time.
+          <br><hr>
+          
+          Exclusive Beta Tester Reward:
+         <b><br>
+          ▪️ Glorious Colorful Name in Profile.<br>
+          ▪️ Get a Limited Special Verification Mark on Your Profile.
+          
+          </b>
+  
+          <br><br>
+          2021.02.28 - 2021.03.10
+          <br><br>
+          
+          <a href="https://docs.google.com/forms/d/e/1FAIpQLSc6T9_sLxnQnFJCglyITeYJtytb5BQLyVSPqaPU_twVkUwARA/viewform?usp=sf_link">
+         <button style="background-color:grey;padding:5px 50px;color:#fff;border-radius:5px;text-decoration:none;" type="submit">Register Now</button>
+          <br></a>
+          
+          <sub>
+          If you are already a registered beta tester you can safely close this
+          message. 
+      </sub>
+         </p>
+         </center>
+      </div> 
+   </div>
+</div>
 
 
 
@@ -49,19 +128,24 @@
 <div class="bs-canvas-body">
 <div class="cart-top-total">
 <div class="cart-total-dil">
-<h4>Available Soon!</h4>
-<span>
 
-</span>
+<iframe id="g2hFrame" title="islamic-calendar" style="width: 280px; height: 270px; border: 1px solid #ddd;" scrolling="no" src="https://www.islamicfinder.org/islamic-calendar/widgetGregorian?type=Gregorian"> </iframe>
+<hr>
+
 </div>
 <div class="cart-total-dil pt-2">
-<h4>
-
-</h4>
-<span>
-
-</span>
+পবিত্র মাহে রমজান শুরু হবে
+<h3>সোমবার, ১২ এপ্রিল ২০২১</h3>
 </div>
+
+<div class="cart-total-dil pt-3">
+পবিত্র মাহে রমজান শেষ হবে
+<h3>বুধবার, ০২ মে ২০২১</h3>
+</div>
+
+
+
+
 </div></div></div>
 
 
@@ -110,7 +194,7 @@
 
 <div class="item channel_item">
 <i class="fa fa-map-marker"></i>
-ফাওকাল
+সালনা
 </div>
 <div class="item channel_item">
 <i class="fa fa-map-marker"></i>
@@ -148,6 +232,8 @@
 <li>
 <a href="#" class="offer-link"><i class="fa fa-question-circle"></i>Help</a>
 </li>
+
+
 <li>
 <a href="#" id="info2" class="option_links" title="Wishlist"><i class="fa fa-heartbeat"></i><span class="noti_count1">00</span></a>
 </li>
@@ -166,18 +252,15 @@
 </span>
 </a>
 </div>
-<a href="#" class="item channel_item"><i class="fa fa-user"></i> 
-User ID: 000-000-000
+<a href="#" class="item channel_item"><i class="fa fa-user"></i>
+User ID: <font color="red">this._invalidated={}; </font></a>
   
-</a>
+<a id="error2" href="#" class="item channel_item"><i class="fa fa-user"></i> My Profile</a>
 <a id="error2" href="#" class="item channel_item"><i class="fa fa-dashboard"></i> Dashbaord</a>
-<a id="error" href="#" class="item channel_item"><i class="fa fa-cart-arrow-down"></i> My Orders</a>
-<a id="error2" href="#" class="item channel_item"><i class="fa fa-heart"></i> My Wishlist</a>
-<a id="error2" href="#" class="item channel_item"><i class="fa fa-money"></i> My Wallet</a>
-<a id="info" href="#" class="item channel_item"><i class="fa fa-address-book"></i> My Address</a>
-<a id="error2" href="#" class="item channel_item"><i class="fa fa-gift"></i> Offers</a>
-<a id="info" href="#" class="item channel_item"><i class="fa fa-question-circle"></i> Faq</a>
-<a id="error2" href="#" class="item channel_item"><i class="fa fa-lock"></i> Logout</a>
+<a id="error2" href="#" class="item channel_item"><i class="fa fa-dollar"></i> My Wallet</a>
+<a id="error2" href="#" class="item channel_item"><i class="fa fa-book"></i> My Wishlist</a>
+<a id="error2" href="#" class="item channel_item"><i class="fa fa-money"></i> Donation</a>
+<a id="error2" href="#" class="item channel_item"><i class="fa fa-sign-out"></i> Logout</a>
 </div>
 </li>
 </ul>
@@ -209,16 +292,25 @@ User ID: 000-000-000
 
 
 
+
+<ul>
+<li>
+<a href="#" id="info" class="option_links" title="Wishlist"><i class="fa fa-credit-card"></i><span class="noti_count1">+</span></a>
+</li>
+</ul>
+
+
 <div class="header_cart order-1">
-<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="fa fa-clock"></i><span></span><ins> হিজরী ক্যালেন্ডার</ins></a>
+<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><i class="fa fa-clock"></i><span></span><ins> ক্যালেন্ডার</ins></a>
 </div>
 <div class="search__icon order-1">
-<a href="#" class="search__btn hover-btn" title="Search">
+<a href="#" id="error2" class="search__btn hover-btn"><i class="fa fa-users"></i>
+</a></div>
 
 
 
-</a>
-</div>
+
+
 </div>
 </div>
 </header>
@@ -338,11 +430,47 @@ User ID: 000-000-000
 <div class="top-text-1">রেল সেবা</div>
 <span>গাজীপুর - ঢাকা ট্রেন সিডিউল</span>
 </div>
-<a id="info" href="#" class="Offer-shop-btn hover-btn">Register Now</a>
+<a id="info" href="#" class="Offer-shop-btn hover-btn">Schedule</a>
 </div>
 </div>
 </div>
 
+
+<div class="item">
+<div class="offer-item">
+<div class="offer-item-img">
+<div class="gambo-overlay"></div>
+<img src="https://images.unsplash.com/photo-1559807715-d9dd67798420?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8cmFpbnklMjB3ZWF0aGVyfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="">
+</div>
+<div class="offer-text-dt">
+<div class="offer-top-text-banner">
+<p>আপডেট</p>
+<div class="top-text-1">আবহাওয়া</div>
+<span>গাজীপুর ও তার আশেপাশের এলাকার আবহাওয়া আপডেট</span>
+</div>
+<a id="info" href="#" class="Offer-shop-btn hover-btn">Schedule</a>
+</div>
+</div>
+</div>
+
+
+
+<div class="item">
+<div class="offer-item">
+<div class="offer-item-img">
+<div class="gambo-overlay"></div>
+<img src="https://images.unsplash.com/photo-1516979187457-637abb4f9353?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTN8fGJvb2tzfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=700&q=60" alt="">
+</div>
+<div class="offer-text-dt">
+<div class="offer-top-text-banner">
+<p>লাইব্রেরী</p>
+<div class="top-text-1">অনুবাদ গ্রন্থ</div>
+<span>সমগ্র</span>
+</div>
+<a id="info" href="#" class="Offer-shop-btn hover-btn">Proceed</a>
+</div>
+</div>
+</div>
 
 
 <div class="item">
@@ -371,8 +499,8 @@ User ID: 000-000-000
 </div>
 </div>
 
-
-<a class="weatherwidget-io" href="https://forecast7.com/en/23d8190d41/dhaka/" data-label_1="DHAKA" data-label_2="WEATHER" data-mode="Current" >DHAKA WEATHER</a>
+<br>
+<a class="weatherwidget-io" href="https://forecast7.com/en/24d0090d42/gazipur/" data-label_1="GAZIPUR" data-label_2="WEATHER" data-mode="Current" data-theme="pure" >GAZIPUR WEATHER</a>
 <script>
 !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
 </script>
@@ -382,14 +510,7 @@ User ID: 000-000-000
 <div class="section145">
 <div class="container">
 <div class="row">
-<div class="col-md-12">
-<div class="main-title-tt">
-<div class="main-title-left">
 
-<h2>Categories</h2>
-</div>
-</div>
-</div>
 <div class="col-md-12">
 <div class="owl-carousel cate-slider owl-theme">
 <div class="item">
@@ -503,7 +624,7 @@ User ID: 000-000-000
  $(document).on('click', '#error2', function(e) {
  swal(
  'Error!',
- 'Unable to connect to server. <b style="color:red;">Connection refused (0×0000247D/681N) is the server running on host "127.0.0.1-GC" and accepting TCP connections on port 5432?</b>',
+ 'Unable to connect to server. Only Registered users can access this page.',
  'error'
  )
  });
