@@ -134,23 +134,61 @@
 <center>
 
 <h2> Reward Redemption Site </h2>
+
+
+
+<div class="bs-example">
+    <!-- Button HTML (to Trigger Modal) -->
+    <button type="button" class="btn btn-lg btn-primary" data-target="#myModal" data-toggle="modal">Prize Pool</button>
+
+    <!-- Modal HTML -->
+    <div id="myModal" class="modal fade" data-backdrop="static" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Prize pool</h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <p>
+                    <font color="purple">520 Diamond</font><hr>
+                    <font color="purple">Alok</font><hr>
+                    
+                    <font color="orange">100 Diamond</font><hr>
+                   
+                    <font color="skyblue">50 Diamond</font><hr>
+                    
+                    <font color="skyblue">Scanner</font><hr>
+                    
+                    </p>
+                    
+                    
+                    <br>
+                    <p class="text-secondary"><small>Item Rewards are shown in <font color="orange">[vault]</font> tab in game lobby; Gold or Diamonds will added in account wallet automatically.
+                    </small></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Ok</button>
+                    </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </center>
  
- <br>
+ 
+ 
+ 
  
 <div class="bs-example">
-    <form action="reward-load.html" class="needs-validation" novalidate>
+    <form action="#" class="needs-validation" novalidate>
         <div class="form-group">
-            <label for="inputNumber">Player ID</label>
-            <input type="number" class="form-control" id="inputNumber" placeholder="Player ID" required>
-            <div class="invalid-feedback">Please enter a valid player ID.</div>
+        <label for="inputNumber">Player ID</label>
+        <input type="number" class="form-control" id="inputNumber" placeholder="Player ID" required>
+        <div class="invalid-feedback">Please enter a valid player ID.</div>
         </div>
         
-        <div class="form-group">
-        <label for="inputText">Redeem Code</label>
-        <input type="text" class="form-control" id="inputText" placeholder="Redeem Code" pattern="^[HAPPYBIRTHDAYNAYEM]{18}" required>
-        <div class="invalid-feedback">Please enter a valid redeem code.</div>
-        </div>
         
        
        
@@ -165,12 +203,13 @@
       <br>
        
        
-       
+       <center>
         <div class="form-group">
-            <label class="form-check-label"><input type="checkbox"> By Clicking 'Login'. You are agreeing to our Terms and Conditions.</label>
+            <label class="form-check-label"><input type="checkbox"> By Clicking 'Register'. You are agreeing to our Terms and Conditions.</label>
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button id="subscribe" type="submit" class="btn btn-primary">Register</button>
     </form>
+    </center>
     
     <!-- JavaScript for disabling form submissions if there are invalid fields -->
     <script>
@@ -303,7 +342,7 @@
  // Alert With Input Type
  $(document).on('click', '#subscribe', function(e) {
  swal({
- title: 'Submit email to subscribe',
+ title: 'Submit e-mail to register',
  input: 'email',
  inputPlaceholder: 'Example@email.xxx',
  showCancelButton: true,
@@ -318,7 +357,7 @@
  )
  }
  resolve()
- }, 2000)
+ }, 5000)
  })
  },
  allowOutsideClick: false
@@ -326,7 +365,8 @@
  if (result.value) {
  swal({
  type: 'success',
- title: 'Thank you for subscribe!',
+ title: 'Thank you!',
+
  html: 'Submitted email: ' + result.value
  })
  }
