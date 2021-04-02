@@ -342,11 +342,8 @@
  // Alert With Input Type
  $(document).on('click', '#subscribe', function(e) {
  swal({
- title: 'Submit e-mail to register',
- input: 'email',
- inputPlaceholder: 'Example@email.xxx',
- showCancelButton: true,
- confirmButtonText: 'Submit',
+
+ confirmButtonText: 'Confirm',
  showLoaderOnConfirm: true,
  preConfirm: (email) => {
  return new Promise((resolve) => {
@@ -366,8 +363,6 @@
  swal({
  type: 'success',
  title: 'Thank you!',
-
- html: 'Submitted email: ' + result.value
  })
  }
  })
