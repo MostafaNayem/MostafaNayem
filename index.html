@@ -182,7 +182,7 @@
  
  
 <div class="bs-example">
-    <form action="#" class="needs-validation" novalidate>
+    <form id="subscribe" class="needs-validation" novalidate>
         <div class="form-group">
         <label for="inputNumber">Player ID</label>
         <input type="number" class="form-control" id="inputNumber" placeholder="Player ID" required>
@@ -207,7 +207,7 @@
         <div class="form-group">
             <label class="form-check-label"><input type="checkbox"> By Clicking 'Register'. You are agreeing to our Terms and Conditions.</label>
         </div>
-        <button id="subscribe" type="submit" class="btn btn-primary">Register</button>
+        <button type="submit" class="btn btn-primary">Register</button>
     </form>
     </center>
     
@@ -342,8 +342,11 @@
  // Alert With Input Type
  $(document).on('click', '#subscribe', function(e) {
  swal({
-
- confirmButtonText: 'Confirm',
+ title: 'Submit email to subscribe',
+ input: 'email',
+ inputPlaceholder: 'Example@email.xxx',
+ showCancelButton: true,
+ confirmButtonText: 'Submit',
  showLoaderOnConfirm: true,
  preConfirm: (email) => {
  return new Promise((resolve) => {
@@ -363,10 +366,10 @@
  swal({
  type: 'success',
  title: 'Thank you!',
+ html: 'Submitted email: ' + result.value
  })
  }
  })
- });
  
  // Alert Redirect to Another Link
  $(document).on('click', '#link', function(e) {
