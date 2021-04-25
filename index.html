@@ -1,515 +1,145 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, shrink-to-fit=9">
-<meta name="description" content="Leak Studio">
-<meta name="author" content="Leak Studio">
-<title>Leak Studio</title>
-
-<link href="http://leakstudio.me/unicons.css" rel="stylesheet">
-<link href="http://leakstudio.me/style.css" rel="stylesheet">
-<link href="http://leakstudio.me/responsive.css" rel="stylesheet">
-<link href="http://leakstudio.me/night-mode.css" rel="stylesheet">
-
-<link href="http://leakstudio.me/all.min.css" rel="stylesheet">
-<link href="http://leakstudio.me/owl.carousel.css" rel="stylesheet">
-<link href="http://leakstudio.me/owl.theme.default.min.css" rel="stylesheet">
-<link href="http://leakstudio.me/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" type="text/css" href="http://leakstudio.me/semantic.min.css">
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
-
-
-
-
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="https://baf.mil.bd/website/assets/css/style.css">
-
-
-<!-- jQuery -->
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-   <!-- SweetAlert2 -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
-   
-
-<style type="text/css">
-
-.modal {
-	z-index: 10;
-	display: block;
-	padding-top: 150px;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-	height: 100%;
-	overflow: auto;
-	background-color: rgb(0,0,0);
-	background-color: rgba(0,0,0,0.5)
-}
-.modal-content {
-	margin: auto;
-	background-color: #fff;
-	position: relative;
-	padding: 0;
-	outline: 0;
-	max-width: 600px
-}
-.modal-inner { padding: 20px 30px; }
-.modal-close {
-	-webkit-touch-callout: none;
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	position: absolute;
-	right: 0;
-	top: 0;
-	background: #ccc;
-	padding: 6px 10px;
-}
-.animate-opacity { animation: opac 0.8s }@keyframes opac{from{opacity:0} to{opacity:1}}
-</style>
-
-</head>
-<body>
-
-
-
-
-
-
-
-
-<div class="bs-canvas bs-canvas-left position-fixed bg-cart h-100">
-<div class="bs-canvas-header side-cart-header p-3 ">
-<div class="d-inline-block  main-cart-title">Join Leak Studio<span></span></div>
-<button type="button" class="bs-canvas-close close" aria-label="Close"><i class="fa fa-times"></i></button>
-</div>
-<div class="bs-canvas-body">
-<div class="cart-top-total">
-<div class="cart-total-dil">
-
-
-<hr>
-
-</div>
-<div class="cart-total-dil pt-2">
-
-</div>
-
-<div class="cart-total-dil pt-3">
-
-
-</div>
-
-
-
-
-</div></div></div>
-
-
-
-
-<header class="header clearfix">
-<div class="top-header-group">
-<div class="top-header">
-<div class="res_main_logo">
-<a href="index.html"><img src="https://www.svgrepo.com/show/217741/d.svg" alt=""></a>
-</div>
-<div class="main_logo" id="logo">
-<a href="index.html"><img src="https://gambolthemes.net/html-items/gambo_supermarket_demo/images/logo.svg" alt=""></a>
-<a href="index.html"><img class="logo-inverse" src="https://gambolthemes.net/html-items/gambo_supermarket_demo/images/dark-logo.svg" alt=""></a>
-</div>
-<div class="select_location">
-<div class="ui inline dropdown loc-title">
-<div class="text">
-<i class="fa fa-map-marker"></i>
-Bangladesh
-</div>
-<i class="fa fa-level-down"></i>
-<div class="menu dropdown_loc">
-<div class="item channel_item">
-<i class="fa fa-map-marker"></i>
-Bangladesh
-</div>
-<div class="item channel_item">
-<i class="fa fa-map-marker"></i>
-India
-</div>
-<div class="item channel_item">
-<i class="fa fa-map-marker"></i>
-Nepal
-</div>
-
-
-
-</div>
-</div>
-</div>
-
-
-<div class="header_right">
-<ul>
-<li>
-<a href="#" class="offer-link"><i class="fa fa-mobile"></i>1800-000-000</a>
-</li>
-<li>
-<a href="#" class="offer-link"><i class="fa fa-gift"></i>Offers</a>
-</li>
-<li>
-<a href="#" class="offer-link"><i class="fa fa-question-circle"></i>Help</a>
-</li>
-
-
-<li>
-<a href="#" id="info2" class="option_links" title="Wishlist"><i class="fa fa-heartbeat"></i><span class="noti_count1">00</span></a>
-</li>
-<li class="ui dropdown">
-<a href="#" class="opts_account">
-<img src="https://gambolthemes.net/html-items/gambo_supermarket_demo/images/avatar/img-5.jpg" alt="">
-<span class="user__name">User</span>
-<i class="fa fa-sort-desc"></i>
-</a>
-<div class="menu dropdown_account">
-<div class="night_mode_switch__btn">
-<a href="#" id="night-mode" class="btn-night-mode">
-<i class="fa fa-moon"></i> Night mode
-<span class="btn-night-mode-switch">
-<span class="uk-switch-button"></span>
-</span>
-</a>
-</div>
-<a href="#" class="item channel_item"><i class="fa fa-user"></i>
-User ID: <font color="red">this._invalidated={}; </font></a>
+ <meta property="og:image" content="ls-logo.jpg" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, viewport-fit=cover" />
+  <title>JOIN LEAK STUDIO</title>
   
-<a id="error2" href="#" class="item channel_item"><i class="fa fa-user"></i> My Profile</a>
-<a id="error2" href="#" class="item channel_item"><i class="fa fa-dashboard"></i> Dashbaord</a>
-<a id="error2" href="#" class="item channel_item"><i class="fa fa-dollar"></i> My Wallet</a>
-<a id="error2" href="#" class="item channel_item"><i class="fa fa-book"></i> My Wishlist</a>
+     <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,700,700i,900,900i%7CSource+Sans+Pro:300,300i,400,400i,600,600i,700,700i,900,900i" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="https://www.clashofmagic.cc/styles/style.css">
+  <link rel="stylesheet" type="text/css" href="framework.css">
+  <link rel="stylesheet" type="text/css" href="https://www.clashofmagic.cc/fonts/css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style2.css">
+  
+ 
+ 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+ 
+ 
+ <script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script type='text/javascript'>
+        $(function () {
+            var overlay = $('<div id="overlay"></div>');
+            overlay.show();
+            overlay.appendTo(document.body);
+            $('.popup').show();
+            $('.close').click(function () {
+                $('.popup').hide();
+                overlay.appendTo(document.body).remove();
+                return false;
+            });
+ 
+            $('.x').click(function () {
+                $('.popup').hide();
+                overlay.appendTo(document.body).remove();
+                return false;
+            });
+        });
+    </script>
+    
+ 
+</head>
 
-<a id="error2" href="#" class="item channel_item"><i class="fa fa-sign-out"></i> Logout</a>
+<body class="theme-light" data-background="none" data-highlight="red1">
+
+  <div>
+  
+  
+
+    <div class="header header-fixed header-logo-center">
+     <a href="index.html" class="header-title"><b>LEAK STUDIO </b> </a>
+      <a class="header-icon header-icon-4"><i class="fa fa-wifi"></i></a> 
+      
+      
+    
+      <a class="header-icon header-icon-1"><i class="fa fa-bars"></i></a> 
+      
+      </div>
+    
+  <br> <br><br>
+  <marquee> লিক স্টুডিও যোগ দিন - রেজিষ্ট্রেশন চলছে। আবেদনের শেষ তারিখঃ ২৬ এপ্রিল ২০২১</marquee>
+  
+  <br><br><br><br>
+
+     <center>
+     <button style="background-color:white;padding:10px 10px;color:#fff;border-radius:5px;text-decoration:none;" type="submit">
+     <font color="grey">
+    <script src ="https://form.jotform.com/static/feedback2.js" type="text/javascript"></script><script type="text/javascript">
+    var JFL_211143297653455 = new JotformFeedback({
+    formId: '211143297653455',
+    base: 'https://form.jotform.com/',
+    windowTitle: 'Join Leak Studio',
+    background: '#FFA500',
+    fontColor: '#FFFFFF',
+    type: 'false',
+    height: 500,
+    width: 700,
+    openOnLoad: false
+    });
+    </script>
+    <a class="btn lightbox-211143297653455" style="margin-top: 16px">
+    APPLY NOW!
+    </a>
+     </font></button>
+     </center>
+     <br><br>
+  
 </div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-
-
-<div class="sub-header-group">
-<div class="sub-header">
-<div class="ui dropdown">
-<a href="#" class="category_drop hover-btn" data-toggle="modal" data-target="#category_model" title="Categories"><i class="fa fa-bar"></i><span class="cate__icon">Select Category</span></a>
-</div>
-<nav class="navbar navbar-expand-lg navbar-light py-3">
-<div class="container-fluid">
-<button class="navbar-toggler menu_toggle_btn" type="button" data-target="#navbarSupportedContent"><i class="fa fa-bars"></i></button>
-<div class="collapse navbar-collapse d-flex flex-column flex-lg-row flex-xl-row justify-content-lg-end bg-dark1 p-3 p-lg-0 mt1-5 mt-lg-0 mobileMenu" id="navbarSupportedContent">
-<ul class="navbar-nav main_nav align-self-stretch">
-<li class="nav-item"><a href="index.html" class="nav-link active" title="Home">Home</a></li>
-<li class="nav-item"><a href="#" class="nav-link new_item" title="New Products">Leaks</a></li>
-<li class="nav-item"><a href="#" class="nav-link" title="Featured Products">News</a></li>
-
-
-<li class="nav-item"><a href="#" class="nav-link" title="Contact">Contact Us</a></li>
-</ul>
-</div>
-</div>
-</nav>
+  
+  
+  <br> <br><br><br><br><br><br>
+  
+  
 
 
 
+<center>
+  
+ <sup>  <font color="grey">
+   <a href="https://ffsupport.zendesk.com/hc/en-us">
+	<i class="fa fa-headphones"> Customer Service</i>
+	</a>
+	<br><br>
+	
+	
+	2019-2021 © Leak Studio Online. <br>
+	Trademarks belong to their respective owners. All rights reserved. 
+	</center></font>
+	
 
-<ul>
-<li>
-<a href="#" id="info" class="option_links" title="Wishlist"><i class="fa fa-credit-card"></i><span class="noti_count1">+</span></a>
-</li>
-</ul>
-
-
-<div class="header_cart order-1">
-<a href="#" class="cart__btn hover-btn pull-bs-canvas-left" title="Cart"><span></span><ins> Join us</ins></a>
-</div>
-<div class="search__icon order-1">
-<a href="#" id="error2" class="search__btn hover-btn"><i class="fa fa-users"></i>
-</a></div>
-
-
-
-
-
-</div>
-</div>
-</header>
-
-
-
-
-
-
-<div class="wrapper">
-
-<div class="main-banner-slider">
-<div class="container">
-<div class="row">
-<div class="col-md-12">
-<div class="owl-carousel offers-banner owl-theme">
-
-<div class="item">
-<div class="offer-item">
-<div class="offer-item-img">
-<div class="gambo-overlay"></div>
-<img src="https://wallpaperaccess.com/full/2044720.jpg" alt="">
-</div>
-<div class="offer-text-dt">
-<div class="offer-top-text-banner">
-<p>Leaks</p>
-<div class="top-text-1">Latest Updates</div>
-<span>Leak Studio</span>
-</div>
-<a href="https://www.facebook.com/leakstudio/" class="Offer-shop-btn hover-btn">Proceed</a>
-</div>
-</div>
-</div>
-
-
-<div class="item">
-<div class="offer-item">
-<div class="offer-item-img">
-<div class="gambo-overlay"></div>
-<img src="https://wallpaperaccess.com/full/1077373.jpg" alt="">
- </div>
-<div class="offer-text-dt">
-<div class="offer-top-text-banner">
-<p>Top up</p>
-<div class="top-text-1">In-Game Top up</div>
-<span>Leak Studio Official</span>
-</div>
-<a href="https://www.facebook.com/leakstudio.official/" class="Offer-shop-btn hover-btn">Proceed</a>
-</div>
-</div>
-</div>
-
-
-
-</div>
-</div>
-</div>
-</div>
-</div>
 <br>
 
-<marquee direction="down" scrollamount="2" onmouseover="this.stop();" onmouseout="this.start();">
 
 
-             
-                <div class="single-baf-notice">
-                    <a href=""><i class="fa fa-flag"></i> Wear Mask, Stay Safe!</a>
-                </div>
-               
+    </div>
+    <!--Menu Settings-->
+    <div style="display:none">
+      <div class="toggle-with-icon">
+        <i class="toggle-icon round-tiny fa fa-moon bg-red2-dark color-white"></i>
+        <a href="#" class="toggle-switch toggle-ios toggle-off" data-toggle-theme data-toggle-height="27" data-toggle-width="50" data-toggle-content="toggle-content-1" data-toggle-checkbox="toggle-checkbox-1" data-bg-on="bg-green1-dark" data-bg-off="">
+        </a>
+      </div>
+    </div>
 
-                <div class="single-baf-notice">
-                    <a href="https://drive.google.com/folderview?id=1-L9I95ulRuRVQspl9fTXZX1tg888AlF6"><i class="fa fa-flag"></i> Selected Candidate - Editor - Leak Studio</a>
-                </div>
-
-<div id="info" class="single-baf-notice">
-                   <a href=""> <i class="fa fa-flag"></i> SB Information - Leak Studio (2nd Phase)</a>
-               </div>
-              
-            </marquee>
+    <div class="menu-hider"></div>
+  </div>
 
 
-
-
-<br><br>
-    <center>
-    
-    <sup> Need help? visit our <font color="orange" ><u>Help Center.</u></font></sup>
-    
-    <br><br>
-    
-    <sup>
-    
-    <b>
-    LEAK STUDIO BANGLADESH PRIVATE LIMITED (ESDE: 20J01M2019, TOF: 8UD563)
-     <br></b>
-    Station Head Quarter, Gazipur Sadar, Shimultoli,
-     
-    Gazipur Cantonment
-   
-    <br>
-    DHAKA, Dhaka, Gazipur-BOF, Bangladesh, 1700
-    
-    
-    
-    </sup>
-  
-
-     </center>
-      
-
-
-
-
-
-<script type="text/javascript">
- // Alert Modal Type
- $(document).on('click', '#success', function(e) {
- swal(
- 'Success',
- 'You clicked the <b style="color:green;">Success</b> button!',
- 'success'
- )
- });
- 
- $(document).on('click', '#error', function(e) {
- swal(
- 'Error!',
- 'Account region does not match with your current region. Click “Proceed” to continue.',
- 'error'
- )
- });
- 
- $(document).on('click', '#error2', function(e) {
- swal(
- 'Error!',
- 'Unable to connect to server. Only Registered users can access this page.',
- 'error'
- )
- });
- 
- $(document).on('click', '#warning', function(e) {
- swal(
- 'Warning!',
- 'You clicked the <b style="color:coral;">warning</b> button!',
- 'warning'
- )
- });
- 
- $(document).on('click', '#info', function(e) {
- swal(
- '',
- 'The server will be <b style="color:cornflowerblue;">ready</b> soon!',
- 'info'
- )
- });
- 
- $(document).on('click', '#info2', function(e) {
- swal(
- '',
- '',
- 'info'
- )
- });
- $(document).on('click', '#question', function(e) {
- swal(
- 'Question!',
- 'You clicked the <b style="color:grey;">question</b> button!',
- 'question'
- )
- });
- 
- // Alert With Custom Icon and Background Image
- $(document).on('click', '#icon', function(event) {
- swal({
- title: 'Custom icon!',
- text: 'Alert with a custom image.',
- imageUrl: 'https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg',
- imageWidth: 200,
- imageHeight: 200,
- imageAlt: 'Custom image',
- animation: false
- })
- });
- 
- $(document).on('click', '#image', function(event) {
- swal({
- title: 'Custom background image, width and padding.',
- width: 700,
- padding: 150,
- background: '#fff url(https://image.shutterstock.com/z/stock-vector--exclamation-mark-exclamation-mark-hazard-warning-symbol-flat-design-style-vector-eps-444778462.jpg)'
- })
- });
- 
- // Alert With Input Type
- $(document).on('click', '#subscribe', function(e) {
- swal({
- title: 'Submit email to subscribe',
- input: 'email',
- inputPlaceholder: 'Example@email.xxx',
- showCancelButton: true,
- confirmButtonText: 'Submit',
- showLoaderOnConfirm: true,
- preConfirm: (email) => {
- return new Promise((resolve) => {
- setTimeout(() => {
- if (email === 'example@email.com') {
- swal.showValidationError(
- 'This email is already taken.'
- )
- }
- resolve()
- }, 2000)
- })
- },
- allowOutsideClick: false
- }).then((result) => {
- if (result.value) {
- swal({
- type: 'success',
- title: 'Thank you for subscribe!',
- html: 'Submitted email: ' + result.value
- })
- }
- })
- });
- 
- // Alert Redirect to Another Link
- $(document).on('click', '#link', function(e) {
- swal({
- title: "Are you sure?", 
- text: "You will be redirected to payment center", 
- type: "warning",
- confirmButtonText: "Confirm",
- showCancelButton: true
- })
- .then((result) => {
- if (result.value) {
- window.location = 'en-garena-card-freefire-topup-mena.html';
- } else if (result.dismiss === 'cancel') {
- swal(
- 'Cancelled',
- 'Your stay here :)',
- 'error'
- )
- }
- })
- });
- </script>
-
-
-
-
-<script data-cfasync="false" src="http://leakstudio.me/email-decode.min.js"></script><script src="http://leakstudio.me/jquery-3.3.1.min.js"></script>
-<script src="http://leakstudio.me/bootstrap.bundle.min.js"></script>
-<script src="http://leakstudio.me/owl.carousel.js"></script>
-<script src="http://leakstudio.me/semantic.min.js"></script>
-<script src="http://leakstudio.me/jquery.countdown.min.js"></script>
-<script src="http://leakstudio.me/custom.js"></script>
-<script src="http://leakstudio.me/offset_overlay.js"></script>
-<script src="http://leakstudio.me/night-mode.js"></script>
 
 
 
 
    
-
+  <script src="https://www.clashofmagic.cc/scripts/jquery.js"></script>
+  <script src="https://www.clashofmagic.cc/scripts/plugins.js"></script>
+  <script src="https://www.clashofmagic.cc/scripts/custom.js"></script>
 </body>
-</html>
