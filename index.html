@@ -16,31 +16,6 @@
   <link rel="stylesheet" href="style2.css">
   
  
- 
- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
- 
-    <!-- jQuery -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <!-- SweetAlert2 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
-    
-
- <style type="text/css">
- .song {
- display: flex;
- align-items: center;
- font-size: 1.1em;
- font-family: "Roboto";
- }
- .pause {
- margin-left: 0.5em;
- cursor:pointer;
- }
- </style>
- 
  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -52,18 +27,75 @@
  }
  </style>
  
+ 
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ 
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- SweetAlert2 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.2.0/sweetalert2.all.min.js"></script>
+    
+ <style>
+ * {
+ box-sizing: border-box;
+ }
+ 
+ .columns {
+ float: center;
+ width: 33.3%;
+ padding: 8px;
+ }
+ 
+ .price {
+ list-style-type: none;
+ border: 1px solid #eee;
+ margin: 0;
+ padding: 0;
+ -webkit-transition: 0.3s;
+ transition: 0.3s;
+ }
+ 
+ .price:hover {
+ box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+ }
+ 
+
+ 
+ .price li {
+ border-bottom: 1px solid #eee;
+ padding: 20px;
+ text-align: center;
+ }
+ 
+ .price .grey {
+ background-color: #eee;
+ font-size: 20px;
+
+ }
+ 
+
+ 
+ @media only screen and (max-width: 600px) {
+ .columns {
+ width: 80%;
+ }
+ }
+ </style>
 </head>
 
 <body class="theme-light" data-background="none" data-highlight="red1">
 
- 
+  <div>
   
   
 
   
     <table border="0">
   <tr>
-  
+   
 <td>
  <button style="background-color:white;padding:5px 5px;color:#fff;border-radius:5px;text-decoration:none;" type="submit">
 
@@ -85,32 +117,9 @@
   
   <td>
   <button style="background-color:white;padding: 6px 6px;color:#fff;border-radius:5px;text-decoration:none;" type="submit">
-  
-  <a onclick="togglePlay()"><i class="fa fa-lock"></i></a>
-  
-  <div class="player">
-  <audio class="audio" src="fifa.mp3" autoplay type="audio" loop="1"></audio>
-  </div>
-  
- <script type="text/javascript">
- 
- var pause = document.querySelector(".pause");
- var audio = document.querySelector(".audio");
- 
- function togglePlay() {
- if (audio.paused) {
- audio.play();
- pause.innerHTML = "🔉";
- } else {
- audio.pause();
- pause.innerHTML = "🔇";
- pause.style.color = " #848484";
- }
- }
- 
- </script>
-  
-  </button>
+  <font color="black">
+  <i class="fa fa-lock"></i>
+  </font></button>
   </td>
   
   <td>
@@ -125,103 +134,86 @@
 <center>
 
 <h2> Reward Redemption Site </h2>
-<br><br>
- Enter vouchar code and press Continue to proceed to marchent to approve the payment.
- </center>
+</center>
  
- <br><br>
- 
- <div class="bs-example">
- <form action="reward-load.html" class="needs-validation" novalidate>
- <div class="form-group">
- <label for="inputEmail">Player ID</label>
- <input type="text" class="form-control" id="inputText" placeholder="Player ID" required>
- <div class="invalid-feedback">Please enter a valid Player ID.</div>
- </div>
- 
- <div class="form-group">
- <label for="inputEmail">Redeem Code</label>
- <input type="text" class="form-control" id="inputText" placeholder="Redeem Code" pattern="^[HAPPYBIRTHDAYNAYEM]{18}" required>
- <div class="invalid-feedback">Please enter a valid Redeem Code.</div>
- </div>
- 
- 
- <div class="col-sm-3">
- <select class="custom-select" required>
- <option value="">Select Server</option>
-<option value="">India</option>
-
- </select>
- </div>
  <br>
  
- 
- 
- <div class="form-group">
- <label class="form-check-label"><input type="checkbox"> By Clicking 'Login'. You are agreeing to our Terms and Conditions.</label>
- </div>
- <button type="submit" class="btn btn-primary">Login</button>
- </form>
- </div>
- 
- 
- <!-- JavaScript for disabling form submissions if there are invalid fields -->
- <script>
- // Self-executing function
- (function() {
- 'use strict';
- window.addEventListener('load', function() {
- // Fetch all the forms we want to apply custom Bootstrap validation styles to
- var forms = document.getElementsByClassName('needs-validation');
- // Loop over them and prevent submission
- var validation = Array.prototype.filter.call(forms, function(form) {
- form.addEventListener('submit', function(event) {
- if (form.checkValidity() === false) {
- event.preventDefault();
- event.stopPropagation();
- }
- form.classList.add('was-validated');
- }, false);
- });
- }, false);
- })();
- </script>
- 
-    <br><br>
+<div class="bs-example">
+    <form action="reward-load.html" class="needs-validation" novalidate>
+        <div class="form-group">
+            <label for="inputNumber">Player ID</label>
+            <input type="number" class="form-control" id="inputNumber" placeholder="Player ID" required>
+            <div class="invalid-feedback">Please enter a valid player ID.</div>
+        </div>
+        
+        <div class="form-group">
+        <label for="inputText">Redeem Code</label>
+        <input type="text" class="form-control" id="inputText" placeholder="Redeem Code" pattern="^[HAPPYBIRTHDAYNAYEM]{18}" required>
+        <div class="invalid-feedback">Please enter a valid redeem code.</div>
+        </div>
+        
+       
+       
+       <div class="col-sm-3">
+       <select class="custom-select" required>
+       <option value="">Select Server</option>
+       <option value="1">India</option>
+       <option value="3">Pakistan</option>
+       <option value="4">Mena</option>
+       </select>
+       </div>
+      <br>
+       
+       
+       
+        <div class="form-group">
+            <label class="form-check-label"><input type="checkbox"> By Clicking 'Login'. You are agreeing to our Terms and Conditions.</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
     
-    <table border="01">
-    <tr>
-    <td>
-   <h4> Important Notice:</h4>
-    <br>
-     1. Redemption code has 16 characters, consisting of capital letters and numbers.
-   <br>
-    2. Item rewards are shown in [vault] tab in game lobby; Golds or diamonds will add in account wallet automatically.
-   <br>
-    3. Please note redemption expiration date. Any expired codes cannot be redeemed.
-   <br>
-    4. Please contact customer service if you encountered any issue.
-   <br>
-    5. Reminder: you will not be able to redeem your rewards with guest accounts. You may bind your account to Facebook or VK in order to receive the rewards.
-   
-   </td></tr>
-   </table>
+    <!-- JavaScript for disabling form submissions if there are invalid fields -->
+    <script>
+        // Self-executing function
+        (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function(form) {
+                    form.addEventListener('submit', function(event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
     
+   <br>
+ <br>
+
     <center>
-    <br>
+    
     <sup> Need help? visit our <font color="orange" ><u>Help Center.</u></font></sup>
     
     <br><br>
     
     <sup>
-    <b>
-    CODA PAYMENTS INDIA PRIVATE LIMITED (SGTIN: 33AAHCC6828J1JH, HSN: 998436)
-    <br></b>
-    New no19, Playground view street, Nandhanam Extension,
     
-    Nandhanam,
+    <b>
+    LEAK STUDIO BANGLADESH PRIVATE LIMITED (ESDE: 20J01M2019, TOF: 8UD563)
+     <br></b>
+    Station Head Quarter, Gazipur Sadar, Shimultoli,
+     
+    Gazipur Cantonment
+   
     <br>
-    CHENNAI, Chennai, Tamil Nadu, India, 600035
+    DHAKA, Dhaka, Gazipur-BOF, Bangladesh, 1700
     
     
     
