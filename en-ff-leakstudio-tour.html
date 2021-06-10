@@ -30,6 +30,23 @@
 		$("#myModal").modal('show');
 	});
 </script>
+
+<style type="text/css">
+
+.song {
+	display: flex;
+	align-items: center;
+	font-size: 1.1em;
+	font-family: "Roboto";
+}
+.pause {
+	margin-left: 0.5em;
+	cursor:pointer;
+}
+
+</style> 
+
+
 </head>
 <body>
   
@@ -44,7 +61,14 @@
   <div class="nav-wrapper">
     	<form role="search" class="search"><input name="utf8" type="hidden" value="&#x2713;" /><input type="search" name="query" id="query" placeholder="Search" aria-label="Search" /></form>
       
-     <a class="submit-a-request"  href="http://leakstudio.me" >Go to Home</a>
+     <a class="submit-a-request"  href="#" onclick="togglePlay()">Bangladesh
+     <div class="player">
+     <audio class="audio" src="tour.mp3" autoplay type="audio" loop="1"></audio>
+     </div>
+     
+     </a>
+     
+     
   </div>
 </header>
 
@@ -54,7 +78,7 @@
 
   <center><br><br><br><br><br><br><br><br>
   
-<img href="en-ff-leakstudio-tour" src="error3.png" height="200" width="330">
+<img src="error4.png" height="200" width="330">
 
 </center>
   </div>
@@ -62,14 +86,43 @@
   
 
   <main role="main">
+<br><br><br><br><br><br>
+<font size="1">
+<center>
 
+Dear Survivors!<br><br>
 
+We are aware of the server connection issue and our dev team is currently working on it to solve it for all of you. Thanks a lot for letting us know about it. Kindly wait for some time as we solve it.
+<br>
+<br><br>
+2019-2021 © Leak Studio Bangladesh limited. 
 
-   
-  
-  
-  
+</center>
+
+</font>
+
       </main>
+      
+      
+      
+      <script type="text/javascript">
+      
+      var pause = document.querySelector(".pause");
+      var audio = document.querySelector(".audio");
+      
+      function togglePlay() {
+      if (audio.paused) {
+      audio.play();
+      pause.innerHTML = "🔉";
+      } else {
+      audio.pause();
+      pause.innerHTML = "🔇";
+      pause.style.color = " #848484";
+      }
+      }
+      
+      </script>
+      
   
 
 </body>
